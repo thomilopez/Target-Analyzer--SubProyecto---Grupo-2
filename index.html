@@ -1,103 +1,218 @@
 <!DOCTYPE html>
+<!--
+═══════════════════════════════════════════════════════════════
+  CTU TARGET ANALYZER — index.html
+  ─────────────────────────────────────────────────────────────
+  ESTRUCTURA DEL DOCUMENTO:
+  1. <head>         Metadatos, favicon, Google Fonts, CSS
+  2. #resolution-warning  Cartel de resolución mínima
+  3. #welcome-popup       Pop-up de bienvenida (3 s)
+  4. #error-modal         Modal de error de URL
+  5. <audio>              Elementos de audio (fondo + scan)
+  6. #particles-js        Canvas del fondo de partículas
+  7. .bunker-container    Contenedor principal
+     ├── .barra-mision    Logo + título centrado
+     ├── .consola-input   Input de URL + botón
+     ├── #loading-container Barra de progreso
+     └── .grid-paneles   Grid 2×2 de paneles
+         ├── #panel-vista      Panel 1 — Vista
+         ├── #panel-tech       Panel 2 — Tecnología
+         ├── #panel-enlaces    Panel 3 — Mapa de enlaces
+         └── #panel-metricas   Panel 4 — Métricas
+  8. <script>       particles.js CDN + app.js local
+═══════════════════════════════════════════════════════════════
+-->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTU | Target Analyzer</title> <link rel="icon" href="favicon.png" type="image/png"> 
+    <title>CTU | Target Analyzer</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <!--
+      Google Fonts: Orbitron — usada SOLO en el título "Target Analyzer"
+      El resto de la UI usa Courier New (var: --font-mono) definido en CSS.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- ═══════════════════════════════════════════
+         SECCIÓN 1: ALERTA DE RESOLUCIÓN MÍNIMA
+         Visible solo cuando viewport < 430×932 px.
+         Controlada íntegramente por CSS media query.
+    ════════════════════════════════════════════ -->
+    <div id="resolution-warning">
+        <div class="res-box">
+            <span class="cursor-blink">_</span>
+            <p>LÍMITE DE RESOLUCIÓN MÍNIMO</p>
+            <small>Resolución mínima soportada: 430×932 px</small>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         SECCIÓN 2: POP-UP DE BIENVENIDA
+         Se muestra al cargar la página durante 3 s.
+         JS lo elimina con animación slide-up.
+         Inicia el audio de fondo al desaparecer.
+    ════════════════════════════════════════════ -->
+    <div id="welcome-popup">
+        <div class="popup-glass">
+            <div class="popup-glow"></div>
+            <img src="Logo.png" alt="CTU Logo" class="popup-logo">
+            <h1 class="popup-title">Target Analyzer</h1>
+            <p class="popup-sub">Bienvenido espía</p>
+            <div class="popup-bar"><div class="popup-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         SECCIÓN 3: MODAL DE ERROR
+         Aparece cuando la URL es inválida o vacía.
+         JS inserta el mensaje en #error-message.
+         Se cierra con #btn-close-error o click fuera.
+    ════════════════════════════════════════════ -->
+    <div id="error-modal" class="oculto">
+        <div class="error-box">
+            <div class="error-header">
+                <span class="error-icon">⚠</span>
+                <span class="error-title">ERROR DE SISTEMA</span>
+            </div>
+            <p id="error-message" class="error-msg"></p>
+            <button id="btn-close-error" class="btn-error-close">[ CERRAR ]</button>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         SECCIÓN 4: ELEMENTOS DE AUDIO
+         #bg-audio     → sonido_fondo.mp3 (loop, vol 0.08)
+                         Se inicia después del popup.
+         #scan-audio   → nuevainterferencia_mp3.mp3
+                         Se reproduce solo durante el escaneo.
+                         Pausa el fondo mientras suena.
+    ════════════════════════════════════════════ -->
+    <audio id="bg-audio"   src="fondofinal.mp3.mpeg"           loop></audio>
+    <audio id="scan-audio" src="nuevainterferencia.mp3.mpeg"     ></audio>
+
+    <!-- ═══════════════════════════════════════════
+         SECCIÓN 5: CANVAS DE PARTÍCULAS
+         particles.js escribe el canvas aquí.
+         z-index: 0 → detrás de toda la UI.
+    ════════════════════════════════════════════ -->
     <div id="particles-js"></div>
 
+    <!-- ═══════════════════════════════════════════
+         SECCIÓN 6: CONTENEDOR PRINCIPAL
+    ════════════════════════════════════════════ -->
     <div class="bunker-container">
+
+        <!-- Barra de misión: logo + título centrados -->
         <div class="barra-mision">
-            <div class="mision-izquierda">
-                <img src="Logo.png" alt="CTU Target Analyzer" class="logo-img">
-                <span class="mision-titulo">Target Analyzer</span>
-            </div>
-            <div class="mision-derecha">
-                <span class="mision-dato">
-                    NOMBRE: <strong class="dato-valor">ARES</strong>
-                </span>
-                <span class="mision-separador">|</span>
-                <span class="mision-dato">
-                    UBICACIÓN: <strong class="dato-valor">DILLINGER GRID</strong>
-                </span>
-                <span class="mision-separador">|</span>
-                <span class="mision-dato">
-                    NIVEL: <strong class="dato-valor">SOLDADO</strong>
-                </span>
-            </div>
+            <img src="Logo.png" alt="CTU" class="logo-img">
+            <span class="mision-titulo">Target Analyzer</span>
         </div>
+
+        <!-- Consola de entrada de URL -->
         <header class="consola-input">
             <span class="prompt-text">TARGET_URL:</span>
-            <input type="text" id="target-url" placeholder="Ingrese URL aquí..." autocomplete="off">
+            <input type="text" id="target-url"
+                   placeholder="Ingrese URL aquí..." autocomplete="off">
             <button id="btn-scan">INICIAR ESCANEO</button>
         </header>
 
+        <!--
+          Barra de carga: oculta por defecto (.oculto).
+          JS la muestra al iniciar el escaneo y la oculta al terminar.
+        -->
         <div id="loading-container" class="oculto">
-            <div class="loading-text"><span class="cursor-blink">_</span> ROBOT SCANNING... BYPASSING FIREWALL...</div>
+            <div class="loading-text">
+                <span class="cursor-blink">_</span> ROBOT SCANNING... BYPASSING FIREWALL...
+            </div>
             <div class="loading-bar">
                 <div class="loading-progress" id="loading-progress"></div>
             </div>
         </div>
 
+        <!-- Grid 2×2 de paneles -->
         <main class="grid-paneles">
+
+            <!-- ── PANEL 1: VISTA ──
+                 panelicon01.png: ícono de crosshair (mira de objetivo)
+                 Muestra captura visual / identificación del objetivo.
+            -->
             <section class="panel panel-scan" id="panel-vista">
-            <div class="scan-highlight"></div>
-            <div class="panel-corners">
-            <span class="corner tl"></span>
-            <span class="corner tr"></span>
-            <span class="corner br"></span>
-            <span class="corner bl"></span>
-            </div>
-            <h2 class="panel-titulo">PANEL 1 // [VISTA]</h2>
-            <div class="contenido-panel">
-            <span class="cursor-blink">_</span> En espera de objetivo para captura visual...
-            </div>
+                <div class="scan-highlight"></div>
+                <div class="panel-corners">
+                    <span class="corner tl"></span><span class="corner tr"></span>
+                    <span class="corner br"></span><span class="corner bl"></span>
+                </div>
+                <h2 class="panel-titulo">PANEL 1 // [VISTA]</h2>
+                <img src="panelicon01.png" alt="" class="panel-icon" id="icon-vista">
+                <div class="contenido-panel">
+                    <span class="cursor-blink">_</span> En espera de objetivo para captura visual...
+                </div>
             </section>
+
+            <!-- ── PANEL 2: TECNOLOGÍA ──
+                 panelicon02.png: ícono de CPU/chip
+                 Muestra análisis de hardware, SO y puertos del objetivo.
+            -->
             <section class="panel panel-scan" id="panel-tech">
-            <div class="scan-highlight"></div>
-            <div class="panel-corners">
-            <span class="corner tl"></span>
-            <span class="corner tr"></span>
-            <span class="corner br"></span>
-            <span class="corner bl"></span>
-            </div>
-            <h2 class="panel-titulo">PANEL 2 // [TECNOLOGÍA]</h2>
-            <div class="contenido-panel">
-            <span class="cursor-blink">_</span> Sensores inactivos...
-            </div>
+                <div class="scan-highlight"></div>
+                <div class="panel-corners">
+                    <span class="corner tl"></span><span class="corner tr"></span>
+                    <span class="corner br"></span><span class="corner bl"></span>
+                </div>
+                <h2 class="panel-titulo">PANEL 2 // [TECNOLOGÍA]</h2>
+                <img src="panelicon02.png" alt="" class="panel-icon" id="icon-tech">
+                <div class="contenido-panel">
+                    <span class="cursor-blink">_</span> Sensores inactivos...
+                </div>
             </section>
+
+            <!-- ── PANEL 3: MAPA DE ENLACES ──
+                 panelicon03.png: ícono de nodos conectados (red/ruta)
+                 Muestra cadena de proxies y origen real de la conexión.
+            -->
             <section class="panel panel-scan" id="panel-enlaces">
-            <div class="scan-highlight"></div>
-            <div class="panel-corners">
-            <span class="corner tl"></span>
-            <span class="corner tr"></span>
-            <span class="corner br"></span>
-            <span class="corner bl"></span>
-            </div>
-            <h2 class="panel-titulo">PANEL 3 // [MAPA_ENLACES]</h2>
-            <div class="contenido-panel">
-            <span class="cursor-blink">_</span> Red de enlaces sin trazar...
-            </div>
+                <div class="scan-highlight"></div>
+                <div class="panel-corners">
+                    <span class="corner tl"></span><span class="corner tr"></span>
+                    <span class="corner br"></span><span class="corner bl"></span>
+                </div>
+                <h2 class="panel-titulo">PANEL 3 // [MAPA_ENLACES]</h2>
+                <img src="panelicon03.png" alt="" class="panel-icon" id="icon-enlaces">
+                <div class="contenido-panel">
+                    <span class="cursor-blink">_</span> Red de enlaces sin trazar...
+                </div>
             </section>
+
+            <!-- ── PANEL 4: MÉTRICAS ──
+                 panelicon04.png: ícono de velocímetro/medidor
+                 Muestra latencia, paquetes interceptados y estado de alerta.
+            -->
             <section class="panel panel-scan" id="panel-metricas">
-            <div class="scan-highlight"></div>
-            <div class="panel-corners">
-            <span class="corner tl"></span>
-            <span class="corner tr"></span>
-            <span class="corner br"></span>
-            <span class="corner bl"></span>
-            </div>
-            <h2 class="panel-titulo">PANEL 4 // [METRICAS]</h2>
-            <div class="contenido-panel">
-            <span class="cursor-blink">_</span> Sin datos para procesar...
-            </div>
+                <div class="scan-highlight"></div>
+                <div class="panel-corners">
+                    <span class="corner tl"></span><span class="corner tr"></span>
+                    <span class="corner br"></span><span class="corner bl"></span>
+                </div>
+                <h2 class="panel-titulo">PANEL 4 // [METRICAS]</h2>
+                <img src="panelicon04.png" alt="" class="panel-icon" id="icon-metricas">
+                <div class="contenido-panel">
+                    <span class="cursor-blink">_</span> Sin datos para procesar...
+                </div>
             </section>
+
         </main>
-    </div>
+    </div><!-- /.bunker-container -->
+
+    <!-- particles.js desde CDN, luego la lógica propia -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="app.js"></script>
- </body>
- </html> 
+</body>
+</html>

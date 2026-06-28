@@ -1,309 +1,611 @@
-/* VARIABLES GLOBALES */
-:root {
-    --fondo-absoluto: #0a0a0a;
-    --fondo-panel:    #091315;
+/* ══════════════════════════════════════════════════════════════
+   CTU TARGET ANALYZER — style.css
+   ──────────────────────────────────────────────────────────────
+   ESTRUCTURA:
+   1.  Variables globales (:root)
+   2.  Reset y base
+   3.  Alerta de resolución mínima
+   4.  Pop-up de bienvenida
+   5.  Modal de error
+   6.  Contenedor maestro (.bunker-container)
+   7.  Barra de misión (.barra-mision)
+   8.  Consola de entrada (.consola-input)
+   9.  Grilla táctica (.grid-paneles)
+   10. Paneles (.panel)
+   11. Íconos de panel (.panel-icon)
+   12. Títulos de panel (.panel-titulo)
+   13. Contenido de panel (.contenido-panel)
+   14. Cursor parpadeante (.cursor-blink)
+   15. Scrollbar personalizado
+   16. Efecto scan border (.panel-scan)
+   17. Fondo de partículas (#particles-js)
+   18. Sistema de carga (#loading-container)
+   19. Efecto glitch (.glitch-activo)
+   20. Responsive (media queries)
+══════════════════════════════════════════════════════════════ */
 
-    --color-terminal: #ffffff; /* Cyan */
-    --color-alerta:   #00ff41; /* Naranja Neón */
-    --color-alerta-hover: #00ff41; /* Verde Neón */
-    --borde-panel:    1px solid #ffffff;
-    --sombra-neon:    0 0 12px rgba(9, 216, 199, 0.2);
-    --color-mision:   #09d8c7;
-    --color-mision-v2: #ffffff; /* Blanco */
-    --color-mision-bg:#091315;
-    --sombra-mision:  0 0 12px rgba(9, 216, 199, 0.2);
-    --corte:          13px;
+
+/* ══════════════════════════════════════════
+   1. VARIABLES GLOBALES
+   Todos los colores, fuentes y sombras
+   se definen aquí para cambiarlos en un
+   solo lugar.
+══════════════════════════════════════════ */
+:root {
+    /* Fondos */
+    --fondo-absoluto: #0a0a0a;          /* Fondo del body */
+    --fondo-panel:    #091315;          /* Fondo de paneles y consola */
+
+    /* Colores principales — DOS variables únicas, sin duplicados */
+    --verde:   #00ff41;                 /* Acento principal: bordes hover, texto alerta, cursores */
+    --blanco:  #ffffff;                 /* Texto base y bordes en reposo */
+
+    /* Sombras */
+    --sombra-verde: 0 0 12px rgba(0, 255, 65, 0.25);
+
+    /* Bordes */
+    --borde-panel: 3px solid var(--blanco);
+
+    /* Tipografía
+       - --font-mono: usada en TODO excepto el título "Target Analyzer"
+       - El título usa 'Orbitron' (Google Fonts), con fallback a monospace */
+    --font-mono:    'Courier New', Courier, monospace;
+    --font-titulo:  'Orbitron', 'AndaleMono', 'Andale Mono', 'Courier New', monospace;
+
+    /* Esquinas cortadas (clip-path) */
+    --corte: 13px;
 }
-/* LA LEY CONSTITUCIONAL Y RESETEO */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-/* TIPOGRAFÍA Y FONDO */
+
+
+/* ══════════════════════════════════════════
+   2. RESET Y BASE
+   Normaliza márgenes, padding y box-sizing.
+   Define tipografía, fondo y centrado global.
+══════════════════════════════════════════ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
     background-color: var(--fondo-absoluto);
-    background-image: repeating-linear-gradient( /* rayas horizontales de fondo */
-        0deg,
-        transparent,
-        transparent 4px,
-        rgba(9, 216, 199, 0.012) 4px,
-        rgba(9, 216, 199, 0.012) 6px
+    /* Rayas horizontales sutiles de fondo */
+    background-image: repeating-linear-gradient(
+        0deg, transparent, transparent 4px,
+        rgba(0, 255, 65, 0.012) 4px, rgba(0, 255, 65, 0.012) 6px
     );
-    color: var(--color-terminal);
-    font-family: 'Courier New', Courier, monospace;
+    color: var(--blanco);
+    font-family: var(--font-mono);      /* Tipografía base para todo el body */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-} 
-/* CONTENEDOR MAESTRO */
-.bunker-container {
-    width: 95%;
-    max-width: 1200px;
-    height: 92vh;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
-/* BARRA DE MISIÓN: La barra superior con logo + título a la izquierda y datos de misión a la derecha. */
-.barra-mision {
-    display:         flex;
-    justify-content: space-between;
-    align-items:     center;
-    opacity: 0.85;
-    padding: 8px 16px;
-    background-color: var(--color-mision-bg);
-    --corte-mision: 13px; /* Borde con esquinas cortadas */
-    clip-path: polygon( /* El borde se hace con ::before porque clip-path elimina el border */
-        var(--corte-mision) 0%,
-        100% 0%,
-        100% calc(100% - var(--corte-mision)),
-        calc(100% - var(--corte-mision)) 100%,
-        0% 100%,
-        0% var(--corte-mision)
-    );
-    position: relative;
-}
-.barra-mision::before {
-    content: '';
-    position: absolute;
+
+
+/* ══════════════════════════════════════════
+   3. ALERTA DE RESOLUCIÓN MÍNIMA
+   Se muestra solo cuando el viewport es
+   menor a 430×932 px (ambas condiciones).
+   Oculta el resto de la UI.
+══════════════════════════════════════════ */
+#resolution-warning {
+    display: none;              /* Oculto por defecto */
+    position: fixed;
     inset: 0;
-    clip-path: polygon(
-        var(--corte-mision) 0%,
-        100% 0%,
-        100% calc(100% - var(--corte-mision)),
-        calc(100% - var(--corte-mision)) 100%,
-        0% 100%,
-        0% var(--corte-mision)
-    );
-    border:     1px solid var(--color-mision-v2);
-    box-shadow: var(--sombra-mision);
-    pointer-events: none;
-}
-.mision-izquierda {
-    display:     flex;
+    background: var(--fondo-absoluto);
+    z-index: 9999;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    flex-direction: column;
 }
-.logo-img {
-    width:  30px;
-    height: 30px;
-    object-fit: contain;
+#resolution-warning .res-box {
+    border: 2px solid var(--verde);
+    padding: 32px 40px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,255,65,0.3);
 }
-.mision-titulo {
-    font-size:      1rem;
-    font-weight:    bold;
-    color:          var(--color-alerta-hover);
-    letter-spacing: 2px;
-    text-transform: uppercase;
+#resolution-warning p {
+    color: var(--verde);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin: 12px 0 8px;
+    font-weight: bold;
 }
-.mision-derecha {
-    display:     flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.72rem;
-    color: rgba(255, 255, 255, 0.6);  /* Al 60% de opacidad */
+#resolution-warning small {
+    color: rgba(255,255,255,0.4);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
     letter-spacing: 1.5px;
 }
-.mision-separador {
-    color: rgba(0, 255, 65, 0.25);  /* El | entre los datos */
+
+/* Activar alerta solo cuando AMBAS dimensiones son menores al límite */
+@media (max-width: 429px) and (max-height: 931px) {
+    #resolution-warning { display: flex; }
+    .bunker-container, #particles-js { display: none; }
 }
-/* Valores resaltados (ARES, DILLINGER GRID, SOLDADO) */
-.dato-valor {
-    color:       var(--color-alerta-hover);
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-/* CONSOLA DE ENTRADA */
-.consola-input {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    opacity: 0.85;
-    padding: 16px 20px;
-    background-color: var(--fondo-panel);
-    box-shadow: var(--sombra-neon);
-    position: relative;
-/* Esquinas cortadas */
-    --corte-consola: 10px;
-    clip-path: polygon(
-        var(--corte-consola) 0%,
-        100% 0%,
-        100% calc(100% - var(--corte-consola)),
-        calc(100% - var(--corte-consola)) 100%,
-        0% 100%,
-        0% var(--corte-consola)
-    );
-}
-/* El borde va en ::before porque clip-path elimina el border */
-.consola-input::before {
-    content: '';
-    position: absolute;
+
+
+/* ══════════════════════════════════════════
+   4. POP-UP DE BIENVENIDA
+   Aparece al cargar la página durante 3 s,
+   luego sale con animación slide-up.
+   Diseño glassmorphic con acento verde.
+══════════════════════════════════════════ */
+#welcome-popup {
+    position: fixed;
     inset: 0;
-    clip-path: polygon(
-        var(--corte-consola) 0%,
-        100% 0%,
-        100% calc(100% - var(--corte-consola)),
-        calc(100% - var(--corte-consola)) 100%,
-        0% 100%,
-        0% var(--corte-consola)
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(4px);
+}
+
+/* Clase agregada por JS para disparar la salida */
+#welcome-popup.slide-up {
+    animation: popup-slide-up 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes popup-slide-up {
+    0%   { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-120%); }
+}
+
+/* Tarjeta con efecto vidrio */
+.popup-glass {
+    position: relative;
+    width: min(420px, 88vw);
+    padding: 48px 40px 40px;
+    background: linear-gradient(
+        160deg,
+        rgba(0, 255, 65, 0.07) 0%,
+        rgba(0, 255, 65, 0.03) 40%,
+        rgba(9, 19, 21, 0.95) 100%
     );
-    border: var(--borde-panel);
-    box-shadow: var(--sombra-neon);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(0,255,65,0.3);
+    box-shadow: 0 0 40px rgba(0,255,65,0.15), inset 0 1px 0 rgba(255,255,255,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+    clip-path: polygon(16px 0%, 100% 0%, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0% 100%, 0% 16px);
+}
+
+/* Destello decorativo en esquina superior derecha */
+.popup-glow {
+    position: absolute;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(0,255,65,0.15) 0%, transparent 70%);
+    top: -60px; right: -60px;
     pointer-events: none;
 }
-.prompt-text {
-    color:          var(--color-alerta);
-    font-weight:    bold;
-    white-space:    nowrap;
-    letter-spacing: 1px;
+
+/* Logo con pulso de brillo */
+.popup-logo {
+    width: 64px; height: 64px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px rgba(0,255,65,0.6));
+    animation: popup-logo-pulse 2s ease-in-out infinite;
 }
-.consola-input input {
-    flex-grow: 1; /* El input ocupa el espacio sobrante */
+@keyframes popup-logo-pulse {
+    0%, 100% { filter: drop-shadow(0 0 12px rgba(0,255,65,0.6)); }
+    50%       { filter: drop-shadow(0 0 24px rgba(0,255,65,0.9)); }
+}
+
+/* Título del popup — usa fuente especial de título */
+.popup-title {
+    font-family: var(--font-titulo);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--verde);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(0,255,65,0.5);
+    text-align: center;
+}
+
+/* Subtítulo con prefijo ">" automático */
+.popup-sub {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.popup-sub::before { content: '> '; color: var(--verde); }
+
+/* Barra de progreso animada (dura 3 s = tiempo del popup) */
+.popup-bar {
+    margin-top: 20px;
+    width: 100%; height: 2px;
+    background: rgba(0,255,65,0.15);
+    overflow: hidden;
+}
+.popup-bar-fill {
+    height: 100%; width: 0%;
+    background: var(--verde);
+    box-shadow: 0 0 8px var(--verde);
+    animation: popup-progress 3s linear forwards;
+}
+@keyframes popup-progress {
+    0%   { width: 0%; }
+    100% { width: 100%; }
+}
+
+
+/* ══════════════════════════════════════════
+   5. MODAL DE ERROR
+   Aparece cuando el usuario ingresa una URL
+   inválida o vacía. Se cierra con el botón
+   o haciendo click fuera del recuadro.
+══════════════════════════════════════════ */
+#error-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(10,10,10,0.7);
+    backdrop-filter: blur(3px);
+}
+#error-modal.oculto { display: none !important; }
+
+.error-box {
+    border: 2px solid rgba(255,60,60,0.7);
+    background: var(--fondo-absoluto);
+    padding: 28px 32px;
+    min-width: 320px; max-width: 480px;
+    box-shadow: 0 0 30px rgba(255,60,60,0.2);
+    clip-path: polygon(10px 0%, 100% 0%, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%, 0% 10px);
+    display: flex; flex-direction: column; gap: 16px;
+}
+.error-header {
+    display: flex; align-items: center; gap: 10px;
+    border-bottom: 1px dashed rgba(255,60,60,0.4);
+    padding-bottom: 12px;
+}
+.error-icon {
+    font-size: 1.2rem;
+    color: #ff3c3c;
+    animation: parpadeo 0.8s step-start infinite;
+}
+.error-title {
+    font-family: var(--font-mono);
+    font-size: 0.85rem; color: #ff3c3c;
+    letter-spacing: 3px; font-weight: bold;
+}
+.error-msg {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6; letter-spacing: 1px;
+    white-space: pre-line;
+}
+.btn-error-close {
+    align-self: flex-end;
     background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--color-terminal);
-    color: var(--color-terminal);
-    font-family: inherit;
-    font-size: 1rem;
-    outline: none;
-    padding: 4px 0;
-    letter-spacing: 1px;
+    border: 1px solid rgba(255,60,60,0.5);
+    color: #ff3c3c;
+    font-family: var(--font-mono);
+    font-size: 0.8rem; padding: 8px 16px;
+    cursor: pointer; letter-spacing: 2px;
+    transition: all 0.2s;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+}
+.btn-error-close:hover {
+    background: rgba(255,60,60,0.1);
+    box-shadow: 0 0 10px rgba(255,60,60,0.3);
+}
+
+
+/* ══════════════════════════════════════════
+   6. CONTENEDOR MAESTRO
+   Columna flex que agrupa barra de misión,
+   consola, carga y grilla de paneles.
+══════════════════════════════════════════ */
+.bunker-container {
+    position: relative;
+    z-index: 1;
+    width: 95%; max-width: 1200px;
+    height: 92vh;
+    display: flex; flex-direction: column;
+    gap: 10px;
+}
+
+
+/* ══════════════════════════════════════════
+   7. BARRA DE MISIÓN
+   Franja superior con logo + título centrados.
+   Esquinas cortadas con clip-path.
+   El borde se dibuja en ::before porque
+   clip-path elimina el border del elemento.
+══════════════════════════════════════════ */
+.barra-mision {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.9;
+    padding: 10px 16px;
+    background-color: var(--fondo-panel);
+    --corte-mision: 13px;
+    clip-path: polygon(
+        var(--corte-mision) 0%, 100% 0%,
+        100% calc(100% - var(--corte-mision)),
+        calc(100% - var(--corte-mision)) 100%,
+        0% 100%, 0% var(--corte-mision)
+    );
+    position: relative;
+}
+/* Borde real de la barra (clip-path lo haría invisible en el elemento padre) */
+.barra-mision::before {
+    content: '';
+    position: absolute; inset: 0;
+    clip-path: polygon(
+        var(--corte-mision) 0%, 100% 0%,
+        100% calc(100% - var(--corte-mision)),
+        calc(100% - var(--corte-mision)) 100%,
+        0% 100%, 0% var(--corte-mision)
+    );
+    border: 2px solid var(--blanco);
+    box-shadow: var(--sombra-verde);
+    pointer-events: none;
+}
+
+.logo-img { width: 32px; height: 32px; object-fit: contain; }
+
+/* Título principal — única excepción de tipografía (usa --font-titulo) */
+.mision-titulo {
+    font-family: var(--font-titulo);
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: var(--verde);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(0,255,65,0.4);
+}
+
+
+/* ══════════════════════════════════════════
+   8. CONSOLA DE ENTRADA
+   Barra con label, input de URL y botón.
+   Mismo sistema de clip-path + ::before
+   que la barra de misión.
+══════════════════════════════════════════ */
+.consola-input {
+    display: flex; gap: 15px; align-items: center;
+    opacity: 0.9; padding: 16px 20px;
+    background-color: var(--fondo-panel);
+    box-shadow: var(--sombra-verde);
+    position: relative;
+    --corte-consola: 10px;
+    clip-path: polygon(
+        var(--corte-consola) 0%, 100% 0%,
+        100% calc(100% - var(--corte-consola)),
+        calc(100% - var(--corte-consola)) 100%,
+        0% 100%, 0% var(--corte-consola)
+    );
+}
+.consola-input::before {
+    content: '';
+    position: absolute; inset: 0;
+    clip-path: polygon(
+        var(--corte-consola) 0%, 100% 0%,
+        100% calc(100% - var(--corte-consola)),
+        calc(100% - var(--corte-consola)) 100%,
+        0% 100%, 0% var(--corte-consola)
+    );
+    border: 2px solid var(--blanco);
+    box-shadow: var(--sombra-verde);
+    pointer-events: none;
+}
+
+/* Label "TARGET_URL:" */
+.prompt-text {
+    font-family: var(--font-mono);
+    color: var(--verde);
+    font-weight: bold; white-space: nowrap; letter-spacing: 1px;
+}
+
+/* Campo de texto */
+.consola-input input {
+    flex-grow: 1; background: transparent; border: none;
+    border-bottom: 1px solid var(--blanco);
+    color: var(--blanco);
+    font-family: var(--font-mono);
+    font-size: 1rem; outline: none;
+    padding: 4px 0; letter-spacing: 1px;
     transition: border-color 0.3s;
 }
-.consola-input input:focus {
-    border-bottom-color: var(--color-alerta);
-}
-.consola-input input::placeholder {
-    color: rgba(255, 255, 255, 0.45)
-}
+.consola-input input:focus { border-bottom-color: var(--verde); }
+.consola-input input::placeholder { color: rgba(255,255,255,0.4); }
+
+/* Botón de escaneo */
 .consola-input button {
-    background-color: var(--color-terminal);
+    background-color: var(--blanco);
     color: var(--fondo-absoluto);
-    border: none;
-    padding: 10px 20px;
+    border: none; padding: 10px 20px;
     font-weight: bold;
-    font-family: inherit;
-    font-size:   0.85rem;
-    cursor: pointer;
-     letter-spacing: 1px;
-    transition:  all 0.2s;
-/* Esquinas cortadas en el botón también */
-    clip-path: polygon(
-        8px 0%, 100% 0%,
-        calc(100% - 8px) 100%, 0% 100%
-    );
+    font-family: var(--font-mono);
+    font-size: 0.85rem; cursor: pointer;
+    letter-spacing: 1px; transition: all 0.2s;
+    /* Esquinas cortadas en paralelo */
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
 }
 .consola-input button:hover {
-    background-color: var(--color-alerta-hover);
-    box-shadow: 0 0 15px var(--color-alerta);
+    background-color: var(--verde);
+    box-shadow: 0 0 15px var(--verde);
 }
-.consola-input button:active {
-    transform: scale(0.97);
-}
-/* GRILLA TÁCTICA (CSS GRID) */
+.consola-input button:active { transform: scale(0.97); }
+
+
+/* ══════════════════════════════════════════
+   9. GRILLA TÁCTICA
+   CSS Grid 2×2 que ocupa el espacio restante
+   de la columna flex del contenedor maestro.
+══════════════════════════════════════════ */
 .grid-paneles {
     display: grid;
-    /* Definimos 2 columnas exactamente iguales */
     grid-template-columns: 1fr 1fr;
-    /* Definimos 2 filas exactamente iguales que ocupen el resto del alto */
     grid-template-rows: 1fr 1fr;
-    gap:      14px;
-    flex-grow: 1;
-    min-height: 0;  /* Necesario para que el grid no se desborde */
+    gap: 14px;
+    flex-grow: 1;   /* Ocupa todo el alto disponible */
+    min-height: 0;  /* Necesario para que flex no desborde */
 }
-/* DISEÑO DE CADA PANEL: clip-path corta visualmente las esquinas del elemento incluyendo su border, por eso el borde va en ::before.*/
+
+
+/* ══════════════════════════════════════════
+   10. PANELES
+   Cada panel tiene:
+   - Fondo semitransparente
+   - Esquinas cortadas (clip-path)
+   - Borde grueso en ::before
+   - Efecto expand (scale) al hacer hover
+   - z-index elevado en hover para no quedar
+     detrás de los paneles vecinos
+══════════════════════════════════════════ */
 .panel {
     background-color: var(--fondo-panel);
-    display:        flex;
-    flex-direction: column;
-    opacity: 0.85;
-    padding:  14px 16px;
-    position: relative;
-    min-height: 0;
-/* El corte diagonal en las 2 esquinas opuestas */
+    display: flex; flex-direction: column;
+    opacity: 0.88; padding: 14px 16px;
+    position: relative; min-height: 0;
     clip-path: polygon(
-        var(--corte) 0%,
-        100% 0%,
+        var(--corte) 0%, 100% 0%,
         100% calc(100% - var(--corte)),
         calc(100% - var(--corte)) 100%,
-        0% 100%,
-        0% var(--corte)
+        0% 100%, 0% var(--corte)
     );
-/* Transición para el hover */
-    transition: background-color 0.25s;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.25s, background-color 0.25s, box-shadow 0.3s;
+    z-index: 1;
+    transform-origin: center center;
 }
-/* El borde cian va acá */
+
+/* El panel se expande al pasar el mouse */
+.panel:hover {
+    transform: scale(1.06);
+    z-index: 10; opacity: 1;
+    background-color: #0d1e20;
+    box-shadow: 0 0 30px rgba(0,255,65,0.2), 0 8px 40px rgba(0,0,0,0.8);
+}
+
+/* Marco: 3px blanco en reposo, verde en hover */
 .panel::before {
-    content:  '';
-    position: absolute;
-    inset:    0;
+    content: '';
+    position: absolute; inset: 0;
     clip-path: polygon(
-        var(--corte) 0%,
-        100% 0%,
+        var(--corte) 0%, 100% 0%,
         100% calc(100% - var(--corte)),
         calc(100% - var(--corte)) 100%,
-        0% 100%,
-        0% var(--corte)
+        0% 100%, 0% var(--corte)
     );
-    border:     1px solid var(--color-terminal);
-    box-shadow: var(--sombra-neon);
+    border: 3px solid var(--blanco);
+    box-shadow: var(--sombra-verde);
     pointer-events: none;
     transition: border-color 0.25s, box-shadow 0.25s;
 }
-/* Punto decorativo en la esquina cortada inferior izquierda */
-.panel-corners {
+.panel:hover::before {
+    border-color: var(--verde);
+    box-shadow: 0 0 20px rgba(0,255,65,0.4);
+}
+
+/* Puntos decorativos en las esquinas cortadas */
+.panel-corners { position: absolute; inset: 0; pointer-events: none; }
+.corner { position: absolute; width: 5px; height: 5px; background: var(--blanco); }
+.corner.tl { top: 0;    left: var(--corte); }
+.corner.tr { top: 0;    right: 0; }
+.corner.br { bottom: 0; right: var(--corte); }
+.corner.bl { bottom: 0; left: 0; }
+
+
+/* ══════════════════════════════════════════
+   11. ÍCONOS DE PANEL
+   Imagen centrada absolutamente dentro del
+   panel, visible en estado de espera.
+   Desaparece con transición cuando llegan
+   los datos del backend (clase .oculto-icono).
+   Tamaño: 144px (doble del original 72px).
+══════════════════════════════════════════ */
+.panel-icon {
     position: absolute;
-    inset: 0;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 144px; height: 144px;   /* Doble de tamaño */
+    object-fit: contain;
+    opacity: 0.22;                  /* Marca de agua sutil */
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+/* Estado oculto: fade out cuando llegan datos */
+.panel-icon.oculto-icono {
+    opacity: 0;
     pointer-events: none;
 }
-.corner {
-    position: absolute;
-    width:  4px;
-    height: 4px;
-    background: var(--color-terminal);
-}
-.corner.tl { top: 0;            left: var(--corte);  }
-.corner.tr { top: 0;            right: 0;            }
-.corner.br { bottom: 0;         right: var(--corte); }
-.corner.bl { bottom: 0;         left: 0;             }
-/* Hover: el panel se ilumina un poco más */
-.panel:hover {
-    background-color: #0e0e0e;
-}
-.panel:hover::before {
-    border-color: var(--color-alerta);
-    box-shadow:   0 0 16px rgba(255, 176, 0, 0.25);
-}
+
+
+/* ══════════════════════════════════════════
+   12. TÍTULOS DE PANEL
+   Estilo "prompt de terminal":
+   - Tipografía monoespaciada (--font-mono)
+   - Prefijo "> " automático via ::before
+   - Text-shadow verde para efecto neón
+   - Separador dashed inferior
+══════════════════════════════════════════ */
 .panel-titulo {
-   font-size:      0.85rem;
-    color:          var(--color-alerta);
-    border-bottom:  1px dashed var(--color-terminal);
-    opacity: 0.5;
+    display: block;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    white-space: pre-wrap;
+    text-shadow: 0 0 2px rgba(0,255,65,0.75);
+    line-height: 1;
+    margin-bottom: 10px;
+    color: var(--verde);
+    border-bottom: 1px dashed rgba(255,255,255,0.2);
     padding-bottom: 8px;
-    margin-bottom:  10px;
-    letter-spacing: 2px;
-    flex-shrink: 0;  /* Que no se achique cuando el panel tiene poco espacio */
+    flex-shrink: 0;        /* No se achica si el panel tiene poco espacio */
+    position: relative;
+    z-index: 1;
 }
-/* EL CONTROL DE DESBORDAMIENTO (OVERFLOW) */
+/* Prefijo de terminal */
+.panel-titulo::before { content: '> '; display: inline-block; }
+
+
+/* ══════════════════════════════════════════
+   13. CONTENIDO DE PANEL
+   Área de texto debajo del título.
+   z-index 1 para estar sobre el ícono (z:0).
+   En espera: texto opaco al 45%.
+   Con datos: texto blanco completo.
+══════════════════════════════════════════ */
 .contenido-panel {
     flex-grow: 1;
+    font-family: var(--font-mono);
     font-size: 0.85rem;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.45);  /* El texto de espera se ve más opaco */
+    color: rgba(255,255,255,0.45);
     min-height: 0;
+    position: relative;
+    z-index: 1;
 }
-.scroll-activo { /* La orden que evita que el diseño explote */
-    overflow-y: auto;
-    max-height: 100%;
-}
-/* CURSOR PARPADEANTE:
-   animation: nombre duración función iteraciones
-   step-start = no hay transición, el cambio es abrupto
-   (así parpadea como una terminal real, no hace fade) */
+/* Habilitar scroll si el contenido supera el alto del panel */
+.scroll-activo { overflow-y: auto; max-height: 100%; }
+
+
+/* ══════════════════════════════════════════
+   14. CURSOR PARPADEANTE
+   Simula el cursor de una terminal real:
+   cambio abrupto (step-start), sin fade.
+══════════════════════════════════════════ */
 .cursor-blink {
-    color:  var(--color-alerta);
+    color: var(--verde);
     opacity: 1;
     animation: parpadeo 0.8s step-start infinite;
 }
@@ -311,128 +613,129 @@ body {
     0%, 100% { opacity: 1; }
     50%       { opacity: 0; }
 }
-/* Detalles para embellecer la barra de scroll */
-::-webkit-scrollbar {
-   width: 6px;
-}
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-::-webkit-scrollbar-thumb {
-   background: rgba(255, 255, 255, 0.5);
-}
-::-webkit-scrollbar-thumb:hover {
-    background: var(--color-terminal);
-}
-/* ANIMACIONES(sin JS)
-   scan-border: recorre el borde superior del panel de izquierda
-   a derecha en bucle. Efecto puramente decorativo.*/
+
+
+/* ══════════════════════════════════════════
+   15. SCROLLBAR PERSONALIZADO
+   Solo visible en Chrome/Edge/Safari.
+   Firefox usa scrollbar-color (no implementado).
+══════════════════════════════════════════ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.5); }
+::-webkit-scrollbar-thumb:hover { background: var(--blanco); }
+
+
+/* ══════════════════════════════════════════
+   16. EFECTO SCAN BORDER
+   Línea blanca que recorre el borde superior
+   de cada panel en loop infinito.
+   Es puramente decorativo (pointer-events: none).
+══════════════════════════════════════════ */
 @keyframes scan-border {
     0%   { left: -30%; }
     100% { left: 110%; }
 }
-/* Para activar el efecto de scan en el borde de un panel,
-   podés agregarle la clase "panel-scan" en el HTML */
-.panel-scan {
-    overflow: hidden;
-}
+.panel-scan { overflow: hidden; }
 .panel-scan .scan-highlight {
-    position:   absolute;
-    top:        1px;
-    left:       -30%;
-    width:      30%;
-    height:     1px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        var(--color-terminal),
-        transparent
-    );
+    position: absolute; top: 1px; left: -30%;
+    width: 30%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blanco), transparent);
     animation: scan-border 3s linear infinite;
-    pointer-events: none;
-    z-index: 1;
+    pointer-events: none; z-index: 1;
 }
 
-/* CONFIGURACIÓN DEL FONDO DE PARTÍCULAS */
+
+/* ══════════════════════════════════════════
+   17. FONDO DE PARTÍCULAS
+   El canvas de particles.js se ubica detrás
+   de todo el contenido (z-index: 0).
+══════════════════════════════════════════ */
 #particles-js {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 0; /* Lo mantiene por encima del fondo del body pero debajo del contenido */
-}
-
-/* ASEGURAR QUE EL CONTENIDO ESTÉ POR ENCIMA */
-.bunker-container {
-    /* Agregamos position y z-index a tu clase existente */
-    position: relative;
-    z-index: 1; 
-    /* El resto de tus estilos originales para esta clase se mantienen intactos */
-    width: 95%;
-    max-width: 1200px;
-    height: 92vh;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    z-index: 0;
 }
 
 
-/* --- SISTEMA DE CARGA --- */
-.oculto {
-    display: none !important;
-}
+/* ══════════════════════════════════════════
+   18. SISTEMA DE CARGA
+   Barra de progreso que aparece al escanear.
+   .oculto usa display:none para ocultarse.
+   La transición del progress dura 4.5 s
+   para coincidir con el timeout del JS.
+══════════════════════════════════════════ */
+.oculto { display: none !important; }
 
 #loading-container {
-    padding: 0 20px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
+    padding: 0 20px; margin-bottom: 15px;
+    display: flex; align-items: center;
+    flex-direction: column; gap: 8px;
 }
-
 .loading-text {
-    font-size: 0.8rem;
-    color: var(--color-alerta);
-    letter-spacing: 2px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem; color: var(--verde); letter-spacing: 2px;
 }
-
 .loading-bar {
-    width: 100%;
-    height: 12px;
-    background: rgba(9, 216, 199, 0.1);
-    border: 1px solid var(--color-alerta);
-    position: relative;
-    overflow: hidden;
+    width: 100%; height: 12px;
+    background: rgba(0,255,65,0.1);
+    border: 1px solid var(--verde);
+    position: relative; overflow: hidden;
 }
-
 .loading-progress {
-    height: 100%;
-    background: var(--color-alerta);
-    width: 0%;
-    box-shadow: 0 0 10px var(--color-alerta);
-    /* La transición dura 4.5s para coincidir con el tiempo del JS */
-    transition: width 4.5s cubic-bezier(0.1, 0.7, 0.1, 1); 
+    height: 100%; background: var(--verde); width: 0%;
+    box-shadow: 0 0 10px var(--verde);
+    transition: width 4.5s cubic-bezier(0.1, 0.7, 0.1, 1);
 }
 
-/* --- EFECTO GLITCH TÁCTICO --- */
+
+/* ══════════════════════════════════════════
+   19. EFECTO GLITCH
+   Se aplica a .grid-paneles mientras dura
+   el escaneo. Combina shake (traslación) +
+   rgb-split (text-shadow de colores).
+   pointer-events: none evita clicks accidentales.
+══════════════════════════════════════════ */
 .glitch-activo {
     animation: shake 0.4s infinite, rgb-split 0.2s infinite;
-    pointer-events: none; /* Evita clicks mientras está el glitch */
+    pointer-events: none;
 }
-
 @keyframes shake {
-    0%   { transform: translate(1px, 1px) rotate(0deg); }
-    20%  { transform: translate(-2px, -1px) rotate(-0.5deg); }
-    40%  { transform: translate(-1px, 2px) rotate(0.5deg); }
-    60%  { transform: translate(2px, 1px) rotate(0deg); }
-    80%  { transform: translate(1px, -2px) rotate(0.5deg); }
-    100% { transform: translate(-1px, 1px) rotate(-0.5deg); }
+    0%   { transform: translate(1px,1px)   rotate(0deg); }
+    20%  { transform: translate(-2px,-1px) rotate(-0.5deg); }
+    40%  { transform: translate(-1px,2px)  rotate(0.5deg); }
+    60%  { transform: translate(2px,1px)   rotate(0deg); }
+    80%  { transform: translate(1px,-2px)  rotate(0.5deg); }
+    100% { transform: translate(-1px,1px)  rotate(-0.5deg); }
+}
+@keyframes rgb-split {
+    0%   { text-shadow: 3px 0 0 rgba(255,0,0,.8), -3px 0 0 rgba(0,255,255,.8); filter: brightness(1.2) contrast(1.2); }
+    50%  { text-shadow: -3px 0 0 rgba(255,0,0,.8), 3px 0 0 rgba(0,255,255,.8); filter: brightness(.8) invert(.1); }
+    100% { text-shadow: 3px 0 0 rgba(255,0,0,.8), -3px 0 0 rgba(0,255,255,.8); filter: brightness(1) contrast(1); }
 }
 
-@keyframes rgb-split {
-    0%   { text-shadow: 3px 0px 0px rgba(255,0,0,0.8), -3px 0px 0px rgba(0,255,255,0.8); filter: brightness(1.2) contrast(1.2); }
-    50%  { text-shadow: -3px 0px 0px rgba(255,0,0,0.8), 3px 0px 0px rgba(0,255,255,0.8); filter: brightness(0.8) invert(0.1); }
-    100% { text-shadow: 3px 0px 0px rgba(255,0,0,0.8), -3px 0px 0px rgba(0,255,255,0.8); filter: brightness(1) contrast(1); }
+
+/* ══════════════════════════════════════════
+   20. RESPONSIVE
+   · < 768px: paneles en columna única
+   · < 500px: tipografía reducida
+   · < 430×932: alerta de resolución mínima
+     (definida en sección 3)
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .grid-paneles {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .bunker-container { height: auto; min-height: 92vh; }
+    .consola-input { flex-wrap: wrap; }
+    .consola-input input { min-width: 0; width: 100%; }
+}
+@media (max-width: 500px) {
+    .panel-titulo { font-size: 0.72rem; }
+    .contenido-panel { font-size: 0.75rem; }
+    .consola-input { padding: 12px; gap: 10px; }
+    .mision-titulo { font-size: 0.85rem; }
+    .panel-icon { width: 100px; height: 100px; }
 }
