@@ -1,58 +1,58 @@
 /* ══════════════════════════════════════════════════════════════
-   CTU TARGET ANALYZER — app.js
-   ──────────────────────────────────────────────────────────────
-   DESCRIPCIÓN GENERAL:
-   Maneja toda la lógica del front-end de la aplicación.
-   El flujo principal es:
-     1. Pop-up de bienvenida (3 s) → inicia audio de fondo
-     2. Usuario ingresa URL y presiona "INICIAR ESCANEO"
-     3. Validación de URL → error modal si es inválida
-     4. Audio: fondo se pausa, suena interferencia de escaneo
-     5. Barra de carga + efecto glitch durante 4.5 s
-     6. Llamada al backend (modo demo activo)
-     7. Resultados en paneles + íconos desaparecen
-     8. Audio de fondo se reanuda
+    CTU TARGET ANALYZER — app.js
+    ──────────────────────────────────────────────────────────────
+    DESCRIPCIÓN GENERAL:
+    Maneja toda la lógica del front-end de la aplicación.
+    El flujo principal es:
+        1. Pop-up de bienvenida (3 s) → inicia audio de fondo
+        2. Usuario ingresa URL y presiona "INICIAR ESCANEO"
+        3. Validación de URL → error modal si es inválida
+        4. Audio: fondo se pausa, suena interferencia de escaneo
+        5. Barra de carga + efecto glitch durante 4.5 s
+        6. Llamada al backend (modo demo activo)
+        7. Resultados en paneles + íconos desaparecen
+        8. Audio de fondo se reanuda
 
-   INTEGRACIÓN CON BACKEND (pendiente):
-   · Endpoint esperado: POST /api/scan
-   · Body enviado: { target_url: string }
-   · Respuesta esperada: objeto JSON con campos:
-       vista, os, ports, encryption,
-       proxy1, proxy2, origin,
-       latency, packets, alert
-   · Ver función callBackend() para descomentar el fetch real.
+    INTEGRACIÓN CON BACKEND (pendiente):
+    · Endpoint esperado: POST /api/scan
+    · Body enviado: { target_url: string }
+    · Respuesta esperada: objeto JSON con campos:
+        vista, os, ports, encryption,
+        proxy1, proxy2, origin,
+        latency, packets, alert
+    · Ver función callBackend() para descomentar el fetch real.
 
-   INTEGRACIÓN CON ROBOT DE SCRAPING:
-   · El robot es invocado por el backend; el front no lo llama
-     directamente. Solo consume la respuesta que el backend
-     devuelve una vez que el robot terminó su trabajo.
+    INTEGRACIÓN CON ROBOT DE SCRAPING:
+    · El robot es invocado por el backend; el front no lo llama
+        directamente. Solo consume la respuesta que el backend
+        devuelve una vez que el robot terminó su trabajo.
 
-   ESTRUCTURA DEL ARCHIVO:
-   A. Configuración de particles.js
-   B. Lógica principal (DOMContentLoaded)
-      B1. Referencias al DOM
-      B2. Pop-up de bienvenida
-      B3. Audio de fondo (sonido_fondo.mp3)
-      B4. Audio de escaneo (nuevainterferencia_mp3.mp3)
-      B5. Utilidad de fade de volumen
-      B6. Modal de error
-      B7. Validación de URL
-      B8. Ocultamiento de íconos de panel
-      B9. Renderizado de resultados
-      B10. Llamada al backend
-      B11. Evento principal del botón
+    ESTRUCTURA DEL ARCHIVO:
+    A. Configuración de particles.js
+    B. Lógica principal (DOMContentLoaded)
+        B1. Referencias al DOM
+        B2. Pop-up de bienvenida
+        B3. Audio de fondo (sonido_fondo.mp3)
+        B4. Audio de escaneo (nuevainterferencia_mp3.mp3)
+        B5. Utilidad de fade de volumen
+        B6. Modal de error
+        B7. Validación de URL
+        B8. Ocultamiento de íconos de panel
+        B9. Renderizado de resultados
+        B10. Llamada al backend
+        B11. Evento principal del botón
 ══════════════════════════════════════════════════════════════ */
 
 
 /* ══════════════════════════════════════════
-   A. CONFIGURACIÓN DE PARTICLES.JS
-   Inicializa el fondo de partículas animadas.
-   Parámetros clave:
-   · number.value: cantidad de partículas (241)
-   · line_linked.color: color de líneas (#00ff41 verde)
-   · move.speed: velocidad de movimiento
-   · interactivity.onhover.mode: "repulse" (huyen del cursor)
-   · interactivity.onclick.mode: "push" (agregan partículas)
+    A. CONFIGURACIÓN DE PARTICLES.JS
+    Inicializa el fondo de partículas animadas.
+    Parámetros clave:
+    · number.value: cantidad de partículas (241)
+    · line_linked.color: color de líneas (#00ff41 verde)
+    · move.speed: velocidad de movimiento
+    · interactivity.onhover.mode: "repulse" (huyen del cursor)
+    · interactivity.onclick.mode: "push" (agregan partículas)
 ══════════════════════════════════════════ */
 particlesJS("particles-js", {
   "particles": {
@@ -120,6 +120,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const iconEnlaces  = document.getElementById('icon-enlaces');
     const iconMetricas = document.getElementById('icon-metricas');
 
+
+    // ── CONTROL DE VOLUMEN ──────────────────
+const volumeSlider = document.getElementById('volume-slider');
+const volumePct    = document.getElementById('volume-pct');
+
+volumeSlider.addEventListener('input', () => {
+    const val = parseFloat(volumeSlider.value);
+    bgAudio.volume = val;
+    volumePct.textContent = Math.round(val * 100) + '%';
+});
 
     /* ────────────────────────────────────────
        B2. POP-UP DE BIENVENIDA
