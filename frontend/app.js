@@ -311,33 +311,201 @@ volumeSlider.addEventListener('input', () => {
     function renderResults(data) {
         hideIcons();
 
-        panelVista.innerHTML = `
-            <span class="cursor-blink">_</span> [ÉXITO] Captura de entorno completada.<br>
-            > Sujeto identificado positivamente.<br>
-            > ${data.vista || 'Feed de cámara de seguridad interceptado.'}
-        `;
-
+ 
+        // ── PANEL 1: VISTA — CARRUSEL DE IMÁGENES ───────────────────
+        // Si hay imágenes: carrusel con botones anterior/siguiente
+        // y autoplay cada 4 s que se pausa al tocar los botones.
+        // Si no hay imágenes: solo muestra el texto.
+ 
+        const imagenes = (data.vistaImgs && data.vistaImgs.length > 0)
+            ? data.vistaImgs
+            : (data.vistaImg ? [data.vistaImg] : []);
+ 
+        if (imagenes.length > 0) {
+            panelVista.innerHTML = `
+                <span style="color:var(--verde)">> [ENLACE ESTABLECIDO]</span><br>
+                <span style="font-size:0.78rem;opacity:0.7">${data.vista || ''}</span>
+                <div id="carrusel-wrap" style="position:relative;margin-top:8px;">
+                    <img id="carrusel-img"
+                         src="${imagenes[0]}"
+                         alt="Vista del objetivo"
+                         style="width:100%;max-height:120px;object-fit:cover;
+                                border:1px solid rgba(0,255,65,0.3);
+                                opacity:0.85;display:block;"
+                         onerror="this.style.display='none'">
+ 
+                    <!-- Contador -->
+                    <span id="carrusel-counter"
+                          style="position:absolute;top:4px;right:6px;
+                                 font-family:var(--font-mono);font-size:0.7rem;
+                                 color:var(--verde);background:rgba(0,0,0,0.6);
+                                 padding:1px 5px;">
+                        1 / ${imagenes.length}
+                    </span>
+ 
+                    <!-- Botones solo si hay más de 1 imagen -->
+                    ${imagenes.length > 1 ? `
+                    <div style="display:flex;justify-content:space-between;margin-top:6px;gap:6px;">
+                        <button id="carrusel-prev"
+                                style="flex:1;background:rgba(0,255,65,0.08);
+                                       border:1px solid var(--verde);color:var(--verde);
+                                       font-family:var(--font-mono);font-size:0.75rem;
+                                       cursor:pointer;padding:3px 0;letter-spacing:1px;"
+                                onmouseover="this.style.background='rgba(0,255,65,0.2)'"
+                                onmouseout="this.style.background='rgba(0,255,65,0.08)'">
+                            ◀ PREV
+                        </button>
+                        <button id="carrusel-next"
+                                style="flex:1;background:rgba(0,255,65,0.08);
+                                       border:1px solid var(--verde);color:var(--verde);
+                                       font-family:var(--font-mono);font-size:0.75rem;
+                                       cursor:pointer;padding:3px 0;letter-spacing:1px;"
+                                onmouseover="this.style.background='rgba(0,255,65,0.2)'"
+                                onmouseout="this.style.background='rgba(0,255,65,0.08)'">
+                            NEXT ▶
+                        </button>
+                    </div>` : ''}
+                </div>
+            `;
+ 
+            // Solo activar lógica de carrusel si hay más de 1 imagen
+            if (imagenes.length > 1) {
+                let indiceActual  = 0;
+                let autoplayTimer = null;
+                let pausado       = false;
+ 
+                const imgEl      = document.getElementById('carrusel-img');
+                const counterEl  = document.getElementById('carrusel-counter');
+                const btnPrev    = document.getElementById('carrusel-prev');
+                const btnNext    = document.getElementById('carrusel-next');
+ 
+                // Cambia la imagen con fade suave
+                function mostrarImagen(idx) {
+                    indiceActual = (idx + imagenes.length) % imagenes.length;
+                    imgEl.style.opacity = '0';
+                    setTimeout(() => {
+                        imgEl.src           = imagenes[indiceActual];
+                        imgEl.style.opacity = '0.85';
+                        counterEl.textContent = `${indiceActual + 1} / ${imagenes.length}`;
+                    }, 180);
+                }
+ 
+                imgEl.style.transition = 'opacity 0.18s ease';
+ 
+                // Autoplay cada 4 s
+                function iniciarAutoplay() {
+                    autoplayTimer = setInterval(() => {
+                        if (!pausado) mostrarImagen(indiceActual + 1);
+                    }, 4000);
+                }
+ 
+                function detenerAutoplay() {
+                    clearInterval(autoplayTimer);
+                }
+ 
+                // Botones: pausan el autoplay 10 s y luego lo reanudan
+                btnPrev.addEventListener('click', () => {
+                    pausado = true;
+                    mostrarImagen(indiceActual - 1);
+                    detenerAutoplay();
+                    setTimeout(() => {
+                        pausado = false;
+                        iniciarAutoplay();
+                    }, 10000);
+                });
+ 
+                btnNext.addEventListener('click', () => {
+                    pausado = true;
+                    mostrarImagen(indiceActual + 1);
+                    detenerAutoplay();
+                    setTimeout(() => {
+                        pausado = false;
+                        iniciarAutoplay();
+                    }, 10000);
+                });
+ 
+                iniciarAutoplay();
+            }
+ 
+        } else {
+            // Sin imágenes: solo texto
+            panelVista.innerHTML = `
+                <span style="color:var(--verde)">> [ENLACE ESTABLECIDO]</span><br>
+                ${data.vista || 'Sin datos de identificación.'}
+            `;
+        }
+ 
+        // ── PANEL 2: TECNOLOGÍA ──────────────────────────────────────
+        // Muestra servidor, stack tecnológico y estado de encriptación
         panelTech.innerHTML = `
-            <span class="cursor-blink">_</span> [ANÁLISIS DE HARDWARE]<br>
-            > SO: ${data.os || 'Unknown UNIX-based'}<br>
-            > Puertos Abiertos: ${data.ports || '22(SSH), 443(HTTPS), 8080(PROXY)'}<br>
-            > Nivel de encriptación: ${data.encryption || 'AES-256 (Vulnerado)'}
+            <span style="color:var(--verde)">> [ANÁLISIS DE INFRAESTRUCTURA]</span><br>
+            <br>
+            <span style="color:var(--verde)">// SERVIDOR</span><br>
+            > ${data.os || 'No detectado'}<br>
+            <br>
+            <span style="color:var(--verde)">// STACK TECNOLÓGICO</span><br>
+            > ${data.ports || 'No detectado'}<br>
+            <br>
+            <span style="color:var(--verde)">// ENCRIPTACIÓN</span><br>
+            > ${data.encryption || 'Desconocida'}
         `;
-
+ 
+        // ── PANEL 3: MAPA DE ENLACES ─────────────────────────────────
+        // Muestra dominio, trackers y lista completa de URLs encontradas
+        const linksHtml = (data.links && data.links.length > 0)
+            ? data.links.map(link =>
+                `> <a href="${link}" target="_blank"
+                      style="color:rgba(255,255,255,0.7);text-decoration:none;
+                             font-size:0.75rem;word-break:break-all;"
+                      onmouseover="this.style.color='var(--verde)'"
+                      onmouseout="this.style.color='rgba(255,255,255,0.7)'"
+                  >${link}</a>`
+              ).join('<br>')
+            : '> Sin vectores de enlace detectados.';
+ 
         panelEnlaces.innerHTML = `
-            <span class="cursor-blink">_</span> Trazando nodos...<br>
-            > Proxy 1: ${data.proxy1 || 'Moscú (192.168.x.x)'}<br>
-            > Proxy 2: ${data.proxy2 || 'Berlín (10.0.x.x)'}<br>
-            > Origen Real: ${data.origin || 'Dillinger Grid - Sector 4'}
+            <span style="color:var(--verde)">> [MAPA DE VECTORES]</span><br>
+            <br>
+            <span style="color:var(--verde)">// DOMINIO OBJETIVO</span><br>
+            > ${data.proxy1 || 'No detectado'}<br>
+            <br>
+            <span style="color:var(--verde)">// VIGILANCIA DETECTADA</span><br>
+            > ${data.origin || 'Sin trackers'}<br>
+            <br>
+            <span style="color:var(--verde)">// VECTORES DE ENLACE (${data.proxy2 || '0'})</span><br>
+            ${linksHtml}
         `;
+        panelEnlaces.classList.add('scroll-activo');
+ 
+        // ── PANEL 4: MÉTRICAS ────────────────────────────────────────
+        // Muestra latencia, conteos, peso del documento y palabras clave
+        const topWordsHtml = (data.topWords && data.topWords.length > 0)
+            ? data.topWords.map(w =>
+                `<span style="color:var(--verde)">${w.word}</span>(${w.count})`
+            ).join(' · ')
+            : 'Sin datos';
 
         panelMetricas.innerHTML = `
-            <span class="cursor-blink">_</span> [MÉTRICAS DE CONEXIÓN]<br>
-            > Latencia: ${data.latency || '14ms'}<br>
-            > Paquetes interceptados: ${data.packets || '1,024'}<br>
-            > Estado de alerta del objetivo: ${data.alert || 'IGNORANTE'}
+            <span style="color:var(--verde)">> [MÉTRICAS DE CONEXIÓN]</span><br>
+            <br>
+            <span style="color:var(--verde)">// RENDIMIENTO</span><br>
+            > Latencia: ${data.latency || 'N/D'}<br>
+            > Peso documento: ${data.peso || 'N/D'}<br>
+            <br>
+            <span style="color:var(--verde)">// RECURSOS INTERCEPTADOS</span><br>
+            > ${data.packets || 'N/D'}<br>
+            <br>
+            <span style="color:var(--verde)">// PALABRAS CLAVE</span><br>
+            > ${topWordsHtml}<br>
+            <br>
+            <span style="color:var(--verde)">// ESTADO DE ALERTA</span><br>
+            > <span style="color:${data.alert && data.alert.includes('ALERTA') ? '#ff4444' : 'var(--verde)'};font-weight:bold;">
+                ${data.alert || 'DESCONOCIDO'}
+            </span>
         `;
+        panelMetricas.classList.add('scroll-activo');
     }
+
 
 
     /* ────────────────────────────────────────
@@ -367,35 +535,35 @@ volumeSlider.addEventListener('input', () => {
     async function callBackend(url) {
 
         /* --- MODO DEMO (eliminar cuando el backend esté listo) --- */
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve({
-                    vista:      'Feed de cámara de seguridad interceptado.',
-                    os:         'Unknown UNIX-based',
-                    ports:      '22(SSH), 443(HTTPS), 8080(PROXY)',
-                    encryption: 'AES-256 (Vulnerado)',
-                    proxy1:     'Moscú (192.168.x.x)',
-                    proxy2:     'Berlín (10.0.x.x)',
-                    origin:     'Dillinger Grid - Sector 4',
-                    latency:    '14ms',
-                    packets:    '1,024',
-                    alert:      'IGNORANTE'
-                });
-            }, 4000);
-        });
+        // return new Promise((resolve) => {
+        //     setTimeout(() => {
+        //         resolve({
+        //             vista:      'Feed de cámara de seguridad interceptado.',
+        //             os:         'Unknown UNIX-based',
+        //             ports:      '22(SSH), 443(HTTPS), 8080(PROXY)',
+        //             encryption: 'AES-256 (Vulnerado)',
+        //             proxy1:     'Moscú (192.168.x.x)',
+        //             proxy2:     'Berlín (10.0.x.x)',
+        //             origin:     'Dillinger Grid - Sector 4',
+        //             latency:    '14ms',
+        //             packets:    '1,024',
+        //             alert:      'IGNORANTE'
+        //         });
+        //     }, 4000);
+        // });
         /* --------------------------------------------------------- */
 
-        /* --- INTEGRACIÓN REAL (descomentar cuando esté disponible) ---
-        const response = await fetch('/api/scan', {
+
+        const response = await fetch('/api/escanear', {
             method:  'POST',
             headers: { 'Content-Type': 'application/json' },
-            body:    JSON.stringify({ target_url: url })
+            body:    JSON.stringify({ url: url })
         });
         if (!response.ok) {
             throw new Error(`Error del servidor: HTTP ${response.status}`);
         }
         return await response.json();
-        ------------------------------------------------------------- */
+        
     }
 
 
