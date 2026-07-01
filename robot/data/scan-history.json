@@ -1,0 +1,5063 @@
+{
+  "elnine.com.ar": {
+    "30062026015013": {
+      "estado": "EXITO",
+      "mensaje": "[ENLACE ESTABLECIDO]: Robot operativo y analisis completado.",
+      "objetivo": "https://elnine.com.ar/tabla/fifa-world-cup",
+      "identidad": {
+        "titulo": "Copa Mundial - Tabla, fixture y resultados | ELNINE",
+        "descripcion": "Tabla de posiciones, fixture, resultados y estadisticas de Copa Mundial. Resultados en vivo en ELNINE."
+      },
+      "tecnologias": {
+        "detected": [
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtag script",
+              "analytics usage"
+            ]
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ],
+        "byCategory": {
+          "data_surveillance_trackers": [
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            }
+          ],
+          "network_infrastructure": [
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "all": [
+          {
+            "name": "CloudFront",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Nginx",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Apache",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "React",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Angular",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Vue",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "WordPress",
+            "category": "cms",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Bootstrap",
+            "category": "ui_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "jQuery",
+            "category": "javascript_library",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtag script",
+              "analytics usage"
+            ]
+          },
+          {
+            "name": "Google Tag Manager",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Meta Pixel",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Hotjar",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ]
+      },
+      "metricas": {
+        "tiempoRespuestaMs": 8345,
+        "pesoDocumentoKb": "760.72",
+        "certSslVigente": true,
+        "counts": {
+          "images": 259,
+          "scripts": 49,
+          "sections": 0,
+          "paragraphs": 0,
+          "inputs": 1,
+          "articles": 0,
+          "forms": 0,
+          "links": 95,
+          "headings": 4,
+          "videos": 0,
+          "audios": 0
+        },
+        "topWords": [
+          {
+            "word": "equiposptsjgol",
+            "count": 13
+          },
+          {
+            "word": "00ganador",
+            "count": 12
+          },
+          {
+            "word": "grupo1clasificación",
+            "count": 12
+          },
+          {
+            "word": "16avosgrupo",
+            "count": 11
+          },
+          {
+            "word": "0716",
+            "count": 6
+          },
+          {
+            "word": "00noruegafrancia18",
+            "count": 4
+          },
+          {
+            "word": "00sueciaméxico22",
+            "count": 4
+          },
+          {
+            "word": "0717",
+            "count": 4
+          },
+          {
+            "word": "marfil14",
+            "count": 4
+          },
+          {
+            "word": "mundial",
+            "count": 4
+          }
+        ]
+      },
+      "paneles": {
+        "imageCarousel": {
+          "targetDomain": "elnine.com.ar",
+          "activeAssetSrc": "https://cdn.elnine.com.ar/leagues/world-cup-white.webp",
+          "coreHeadline": "Copa Mundial - Tabla, fixture y resultados | ELNINE",
+          "total": 116,
+          "items": [
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/world-cup-white.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/flags/ivory-coast.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/flags/norway.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/flags/france.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/flags/sweden.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/flags/mexico.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/flags/ecuador.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/2db0aw1duj2my9l5iey5gm6nq.png",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/39q1hq42hxjfylxb7xpe9bvf9.png",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/3a0j0giz3c3ajw9h59evv7lqt.png",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/nations-league.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/6thk4rltubz0yjy35ru5dlo4x.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/1lxer8rysniom522w3vvz45em.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/copa-america.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/euro.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/champions-league.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/59tpnfrwnvhnhzmnvfyug68hj.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/club-world-cup.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/europa-league.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/sudamericana.webp",
+              "selector": "img[src]"
+            }
+          ]
+        },
+        "linkCarousel": {
+          "vectorCount": 79,
+          "items": [
+            "https://elnine.com.ar/tabla/fifa-world-cup",
+            "https://elnine.com.ar/partido/costa-de-marfil-vs-noruega-2026-06-30-ZDRn3OIBka",
+            "https://elnine.com.ar/partido/francia-vs-suecia-2026-06-30--a-k3IXiNr",
+            "https://elnine.com.ar/partido/mexico-vs-ecuador-2026-07-01-gT7-jOd_x9",
+            "https://elnine.com.ar/",
+            "https://x.com/elninees",
+            "https://www.instagram.com/elninees",
+            "https://elnine.com.ar/predecir/mundial-2026",
+            "https://elnine.com.ar/tabla/conmebol-world-cup-qualifiers",
+            "https://elnine.com.ar/tabla/uefa-world-cup-qualifiers",
+            "https://elnine.com.ar/tabla/concacaf-world-cup-qualifiers",
+            "https://elnine.com.ar/tabla/uefa-nations-league",
+            "https://elnine.com.ar/tabla/fifa-u20-world-cup",
+            "https://elnine.com.ar/tabla/conmebol-u20",
+            "https://elnine.com.ar/tabla/conmebol-copa-america",
+            "https://elnine.com.ar/tabla/uefa-european-championship-finals",
+            "https://elnine.com.ar/tabla/uefa-champions-league",
+            "https://elnine.com.ar/tabla/conmebol-libertadores",
+            "https://elnine.com.ar/tabla/fifa-club-world-cup",
+            "https://elnine.com.ar/tabla/uefa-europa-league",
+            "https://elnine.com.ar/tabla/conmebol-sudamericana",
+            "https://elnine.com.ar/tabla/fifa-intercontinental-cup",
+            "https://elnine.com.ar/tabla/uefa-conference-league",
+            "https://elnine.com.ar/tabla/concacaf-champions-cup",
+            "https://elnine.com.ar/tabla/argentina-liga-profesional",
+            "https://elnine.com.ar/tabla/argentina-copa",
+            "https://elnine.com.ar/tabla/argentina-primera-nacional",
+            "https://elnine.com.ar/tabla/argentina-torneo-federal-a",
+            "https://elnine.com.ar/tabla/argentina-primera-b-metropolitana",
+            "https://elnine.com.ar/tabla/argentina-primera-c-metropolitana",
+            "https://elnine.com.ar/tabla/argentina-torneo-proyeccion",
+            "https://elnine.com.ar/tabla/brazil-serie-a",
+            "https://elnine.com.ar/tabla/brazil-copa-do",
+            "https://elnine.com.ar/tabla/colombia-primera-a-apertura",
+            "https://elnine.com.ar/tabla/chile-primera",
+            "https://elnine.com.ar/tabla/uruguay-liga-auf",
+            "https://elnine.com.ar/tabla/paraguay-division-profesional",
+            "https://elnine.com.ar/tabla/ecuador-liga-pro",
+            "https://elnine.com.ar/tabla/peru-liga-1",
+            "https://elnine.com.ar/tabla/bolivia-primera-division",
+            "https://elnine.com.ar/tabla/venezuela-primera-division",
+            "https://elnine.com.ar/tabla/spain-la-liga",
+            "https://elnine.com.ar/tabla/spain-copa-del-rey",
+            "https://elnine.com.ar/tabla/england-premier-league",
+            "https://elnine.com.ar/tabla/england-fa-cup",
+            "https://elnine.com.ar/tabla/england-football-league-trophy",
+            "https://elnine.com.ar/tabla/italy-serie-a",
+            "https://elnine.com.ar/tabla/italy-coppa-italia",
+            "https://elnine.com.ar/tabla/germany-bundesliga",
+            "https://elnine.com.ar/tabla/france-ligue-1"
+          ]
+        },
+        "technologies": {
+          "detected": [
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ],
+          "byCategory": {
+            "data_surveillance_trackers": [
+              {
+                "name": "Google Analytics",
+                "category": "data_surveillance_trackers",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "gtag script",
+                  "analytics usage"
+                ]
+              }
+            ],
+            "network_infrastructure": [
+              {
+                "name": "Open Graph Protocol",
+                "category": "network_infrastructure",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "og meta tags"
+                ]
+              }
+            ]
+          },
+          "all": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Nginx",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Apache",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Vue",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "WordPress",
+              "category": "cms",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Bootstrap",
+              "category": "ui_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "jQuery",
+              "category": "javascript_library",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Hotjar",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "stats": {
+          "counts": {
+            "images": 259,
+            "scripts": 49,
+            "sections": 0,
+            "paragraphs": 0,
+            "inputs": 1,
+            "articles": 0,
+            "forms": 0,
+            "links": 95,
+            "headings": 4,
+            "videos": 0,
+            "audios": 0
+          },
+          "topWords": [
+            {
+              "word": "equiposptsjgol",
+              "count": 13
+            },
+            {
+              "word": "00ganador",
+              "count": 12
+            },
+            {
+              "word": "grupo1clasificación",
+              "count": 12
+            },
+            {
+              "word": "16avosgrupo",
+              "count": 11
+            },
+            {
+              "word": "0716",
+              "count": 6
+            },
+            {
+              "word": "00noruegafrancia18",
+              "count": 4
+            },
+            {
+              "word": "00sueciaméxico22",
+              "count": 4
+            },
+            {
+              "word": "0717",
+              "count": 4
+            },
+            {
+              "word": "marfil14",
+              "count": 4
+            },
+            {
+              "word": "mundial",
+              "count": 4
+            }
+          ]
+        }
+      }
+    },
+    "30062026022520": {
+      "estado": "EXITO",
+      "mensaje": "[ENLACE ESTABLECIDO]: Robot operativo y analisis completado.",
+      "objetivo": "https://elnine.com.ar/",
+      "identidad": {
+        "titulo": "ELNINE - Futbol en Vivo",
+        "descripcion": "Resultados en vivo, fixtures, tablas de posiciones y estadisticas de todas las ligas del mundo. Argentina, Sudamerica, Europa y mas."
+      },
+      "tecnologias": {
+        "detected": [
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtag script",
+              "analytics usage"
+            ]
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ],
+        "byCategory": {
+          "data_surveillance_trackers": [
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            }
+          ],
+          "network_infrastructure": [
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "all": [
+          {
+            "name": "CloudFront",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Nginx",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Apache",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "React",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Angular",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Vue",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "WordPress",
+            "category": "cms",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Bootstrap",
+            "category": "ui_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "jQuery",
+            "category": "javascript_library",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtag script",
+              "analytics usage"
+            ]
+          },
+          {
+            "name": "Google Tag Manager",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Meta Pixel",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Hotjar",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ]
+      },
+      "metricas": {
+        "tiempoRespuestaMs": 1455,
+        "pesoDocumentoKb": "250.04",
+        "certSslVigente": true,
+        "counts": {
+          "images": 117,
+          "scripts": 40,
+          "sections": 2,
+          "paragraphs": 1,
+          "inputs": 0,
+          "articles": 0,
+          "forms": 0,
+          "links": 81,
+          "headings": 3,
+          "videos": 0,
+          "audios": 0
+        },
+        "topWords": [
+          {
+            "word": "00noruegafrancia18",
+            "count": 4
+          },
+          {
+            "word": "00sueciaméxico22",
+            "count": 4
+          },
+          {
+            "word": "marfil14",
+            "count": 4
+          },
+          {
+            "word": "00ecuadorcosta",
+            "count": 3
+          },
+          {
+            "word": "mundial",
+            "count": 3
+          },
+          {
+            "word": "champions",
+            "count": 2
+          },
+          {
+            "word": "eliminatoriasuefa",
+            "count": 2
+          },
+          {
+            "word": "leagueconmebol",
+            "count": 2
+          },
+          {
+            "word": "mundialpredictor",
+            "count": 2
+          },
+          {
+            "word": "serie",
+            "count": 2
+          }
+        ]
+      },
+      "paneles": {
+        "imageCarousel": {
+          "targetDomain": "elnine.com.ar",
+          "activeAssetSrc": "https://cdn.elnine.com.ar/leagues/world-cup-white.webp",
+          "coreHeadline": "ELNINE - Futbol en Vivo",
+          "total": 85,
+          "items": [
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/world-cup-white.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/flags/ivory-coast.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/flags/norway.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/flags/france.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/flags/sweden.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/flags/mexico.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/flags/ecuador.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/2db0aw1duj2my9l5iey5gm6nq.png",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/39q1hq42hxjfylxb7xpe9bvf9.png",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/3a0j0giz3c3ajw9h59evv7lqt.png",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/nations-league.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/6thk4rltubz0yjy35ru5dlo4x.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/1lxer8rysniom522w3vvz45em.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/copa-america.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/euro.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/champions-league.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/59tpnfrwnvhnhzmnvfyug68hj.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/club-world-cup.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/europa-league.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://cdn.elnine.com.ar/leagues/sudamericana.webp",
+              "selector": "img[src]"
+            }
+          ]
+        },
+        "linkCarousel": {
+          "vectorCount": 64,
+          "items": [
+            "https://elnine.com.ar/tabla/fifa-world-cup",
+            "https://elnine.com.ar/partido/costa-de-marfil-vs-noruega-2026-06-30-ZDRn3OIBka",
+            "https://elnine.com.ar/partido/francia-vs-suecia-2026-06-30--a-k3IXiNr",
+            "https://elnine.com.ar/partido/mexico-vs-ecuador-2026-07-01-gT7-jOd_x9",
+            "https://elnine.com.ar/",
+            "https://x.com/elninees",
+            "https://www.instagram.com/elninees",
+            "https://elnine.com.ar/predecir/mundial-2026",
+            "https://elnine.com.ar/tabla/conmebol-world-cup-qualifiers",
+            "https://elnine.com.ar/tabla/uefa-world-cup-qualifiers",
+            "https://elnine.com.ar/tabla/concacaf-world-cup-qualifiers",
+            "https://elnine.com.ar/tabla/uefa-nations-league",
+            "https://elnine.com.ar/tabla/fifa-u20-world-cup",
+            "https://elnine.com.ar/tabla/conmebol-u20",
+            "https://elnine.com.ar/tabla/conmebol-copa-america",
+            "https://elnine.com.ar/tabla/uefa-european-championship-finals",
+            "https://elnine.com.ar/tabla/uefa-champions-league",
+            "https://elnine.com.ar/tabla/conmebol-libertadores",
+            "https://elnine.com.ar/tabla/fifa-club-world-cup",
+            "https://elnine.com.ar/tabla/uefa-europa-league",
+            "https://elnine.com.ar/tabla/conmebol-sudamericana",
+            "https://elnine.com.ar/tabla/fifa-intercontinental-cup",
+            "https://elnine.com.ar/tabla/uefa-conference-league",
+            "https://elnine.com.ar/tabla/concacaf-champions-cup",
+            "https://elnine.com.ar/tabla/argentina-liga-profesional",
+            "https://elnine.com.ar/tabla/argentina-copa",
+            "https://elnine.com.ar/tabla/argentina-primera-nacional",
+            "https://elnine.com.ar/tabla/argentina-torneo-federal-a",
+            "https://elnine.com.ar/tabla/argentina-primera-b-metropolitana",
+            "https://elnine.com.ar/tabla/argentina-primera-c-metropolitana",
+            "https://elnine.com.ar/tabla/argentina-torneo-proyeccion",
+            "https://elnine.com.ar/tabla/brazil-serie-a",
+            "https://elnine.com.ar/tabla/brazil-copa-do",
+            "https://elnine.com.ar/tabla/colombia-primera-a-apertura",
+            "https://elnine.com.ar/tabla/chile-primera",
+            "https://elnine.com.ar/tabla/uruguay-liga-auf",
+            "https://elnine.com.ar/tabla/paraguay-division-profesional",
+            "https://elnine.com.ar/tabla/ecuador-liga-pro",
+            "https://elnine.com.ar/tabla/peru-liga-1",
+            "https://elnine.com.ar/tabla/bolivia-primera-division",
+            "https://elnine.com.ar/tabla/venezuela-primera-division",
+            "https://elnine.com.ar/tabla/spain-la-liga",
+            "https://elnine.com.ar/tabla/spain-copa-del-rey",
+            "https://elnine.com.ar/tabla/england-premier-league",
+            "https://elnine.com.ar/tabla/england-fa-cup",
+            "https://elnine.com.ar/tabla/england-football-league-trophy",
+            "https://elnine.com.ar/tabla/italy-serie-a",
+            "https://elnine.com.ar/tabla/italy-coppa-italia",
+            "https://elnine.com.ar/tabla/germany-bundesliga",
+            "https://elnine.com.ar/tabla/france-ligue-1"
+          ]
+        },
+        "technologies": {
+          "detected": [
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ],
+          "byCategory": {
+            "data_surveillance_trackers": [
+              {
+                "name": "Google Analytics",
+                "category": "data_surveillance_trackers",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "gtag script",
+                  "analytics usage"
+                ]
+              }
+            ],
+            "network_infrastructure": [
+              {
+                "name": "Open Graph Protocol",
+                "category": "network_infrastructure",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "og meta tags"
+                ]
+              }
+            ]
+          },
+          "all": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Nginx",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Apache",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Vue",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "WordPress",
+              "category": "cms",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Bootstrap",
+              "category": "ui_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "jQuery",
+              "category": "javascript_library",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Hotjar",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "stats": {
+          "counts": {
+            "images": 117,
+            "scripts": 40,
+            "sections": 2,
+            "paragraphs": 1,
+            "inputs": 0,
+            "articles": 0,
+            "forms": 0,
+            "links": 81,
+            "headings": 3,
+            "videos": 0,
+            "audios": 0
+          },
+          "topWords": [
+            {
+              "word": "00noruegafrancia18",
+              "count": 4
+            },
+            {
+              "word": "00sueciaméxico22",
+              "count": 4
+            },
+            {
+              "word": "marfil14",
+              "count": 4
+            },
+            {
+              "word": "00ecuadorcosta",
+              "count": 3
+            },
+            {
+              "word": "mundial",
+              "count": 3
+            },
+            {
+              "word": "champions",
+              "count": 2
+            },
+            {
+              "word": "eliminatoriasuefa",
+              "count": 2
+            },
+            {
+              "word": "leagueconmebol",
+              "count": 2
+            },
+            {
+              "word": "mundialpredictor",
+              "count": 2
+            },
+            {
+              "word": "serie",
+              "count": 2
+            }
+          ]
+        }
+      }
+    }
+  },
+  "kick.com": {
+    "30062026015213": {
+      "estado": "EXITO",
+      "mensaje": "[ENLACE ESTABLECIDO]: Robot operativo y analisis completado.",
+      "objetivo": "https://kick.com/kodd",
+      "identidad": {
+        "titulo": "Kodd Stream - Watch Live on Kick",
+        "descripcion": "Business inquires: kodgamingtv@hotmail.com"
+      },
+      "tecnologias": {
+        "detected": [
+          {
+            "name": "Angular",
+            "category": "frontend_framework",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "angular template marker"
+            ]
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ],
+        "byCategory": {
+          "frontend_framework": [
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "angular template marker"
+              ]
+            }
+          ],
+          "network_infrastructure": [
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "all": [
+          {
+            "name": "CloudFront",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Nginx",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Apache",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "React",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Angular",
+            "category": "frontend_framework",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "angular template marker"
+            ]
+          },
+          {
+            "name": "Vue",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "WordPress",
+            "category": "cms",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Bootstrap",
+            "category": "ui_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "jQuery",
+            "category": "javascript_library",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Google Tag Manager",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Meta Pixel",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Hotjar",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ]
+      },
+      "metricas": {
+        "tiempoRespuestaMs": 3655,
+        "pesoDocumentoKb": "679.44",
+        "certSslVigente": true,
+        "counts": {
+          "images": 10,
+          "scripts": 217,
+          "sections": 4,
+          "paragraphs": 8,
+          "inputs": 1,
+          "articles": 0,
+          "forms": 1,
+          "links": 18,
+          "headings": 2,
+          "videos": 1,
+          "audios": 0
+        },
+        "topWords": [
+          {
+            "word": "cookies",
+            "count": 3
+          },
+          {
+            "word": "com",
+            "count": 2
+          },
+          {
+            "word": "our",
+            "count": 2
+          },
+          {
+            "word": "processor",
+            "count": 2
+          },
+          {
+            "word": "ram",
+            "count": 2
+          },
+          {
+            "word": "system",
+            "count": 2
+          },
+          {
+            "word": "use",
+            "count": 2
+          },
+          {
+            "word": "1000w",
+            "count": 1
+          },
+          {
+            "word": "1080ti",
+            "count": 1
+          },
+          {
+            "word": "240mm",
+            "count": 1
+          }
+        ]
+      },
+      "paneles": {
+        "imageCarousel": {
+          "targetDomain": "kick.com",
+          "activeAssetSrc": "https://kick.com/img/kick-logo.svg",
+          "coreHeadline": "Kodd Stream - Watch Live on Kick",
+          "total": 10,
+          "items": [
+            {
+              "type": "image",
+              "url": "https://kick.com/img/kick-logo.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/user/5027494/profile_image/conversion/97c09db4-ccfa-4677-ae6a-eb4578a67d87-fullsize.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/2902784/image/conversion/b6bfbb02-4197-4d4c-956f-45b8390a5b1e-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/2735751/image/conversion/6f186bbd-84ab-4e61-abef-3c5e2eb14303-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/2523266/image/conversion/2290682e-941c-46c4-a4e0-f42c29a016b3-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/438572/image/conversion/293f805e-49fd-4a1d-bb11-fbc3d3cad0dc-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/438803/image/conversion/7a3426e3-da5a-4169-8ecf-6931b38e61f4-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/1670794/image/conversion/0f676e8e-7c33-4ed9-8658-362407313533-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/1790049/image/conversion/ccec38dd-982c-4e82-9d6e-d3ed25367216-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/1670797/image/conversion/cef7bb90-e5f8-4069-a1c3-a4a7e479790b-image.webp",
+              "selector": "img[src]"
+            }
+          ]
+        },
+        "linkCarousel": {
+          "vectorCount": 14,
+          "items": [
+            "https://kick.com/",
+            "https://kick.com/browse",
+            "https://kick.com/category/meccha-chameleon",
+            "https://instagram.com/ivankodcerro",
+            "https://x.com/ivankodcerro",
+            "https://youtube.com/kodgamingtv",
+            "https://tiktok.com/@ivankodcerro",
+            "https://qzino-partners.com/tp3yslbx5",
+            "https://rustera.co/",
+            "mailto:rustera.co@gmail.com",
+            "https://www.donoclip.com/kodgamingtv",
+            "https://www.instagram.com/ivankodcerro/",
+            "https://www.youtube.com/channel/UCuFWm_s5QxEwoufj3HmPjfQ",
+            "https://botrix.live/k/kodgamingtv/tip"
+          ]
+        },
+        "technologies": {
+          "detected": [
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "angular template marker"
+              ]
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ],
+          "byCategory": {
+            "frontend_framework": [
+              {
+                "name": "Angular",
+                "category": "frontend_framework",
+                "detected": true,
+                "confidence": 0.5,
+                "signals": [
+                  "angular template marker"
+                ]
+              }
+            ],
+            "network_infrastructure": [
+              {
+                "name": "Open Graph Protocol",
+                "category": "network_infrastructure",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "og meta tags"
+                ]
+              }
+            ]
+          },
+          "all": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Nginx",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Apache",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "angular template marker"
+              ]
+            },
+            {
+              "name": "Vue",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "WordPress",
+              "category": "cms",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Bootstrap",
+              "category": "ui_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "jQuery",
+              "category": "javascript_library",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Hotjar",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "stats": {
+          "counts": {
+            "images": 10,
+            "scripts": 217,
+            "sections": 4,
+            "paragraphs": 8,
+            "inputs": 1,
+            "articles": 0,
+            "forms": 1,
+            "links": 18,
+            "headings": 2,
+            "videos": 1,
+            "audios": 0
+          },
+          "topWords": [
+            {
+              "word": "cookies",
+              "count": 3
+            },
+            {
+              "word": "com",
+              "count": 2
+            },
+            {
+              "word": "our",
+              "count": 2
+            },
+            {
+              "word": "processor",
+              "count": 2
+            },
+            {
+              "word": "ram",
+              "count": 2
+            },
+            {
+              "word": "system",
+              "count": 2
+            },
+            {
+              "word": "use",
+              "count": 2
+            },
+            {
+              "word": "1000w",
+              "count": 1
+            },
+            {
+              "word": "1080ti",
+              "count": 1
+            },
+            {
+              "word": "240mm",
+              "count": 1
+            }
+          ]
+        }
+      }
+    },
+    "30062026020021": {
+      "estado": "EXITO",
+      "mensaje": "[ENLACE ESTABLECIDO]: Robot operativo y analisis completado.",
+      "objetivo": "https://kick.com/kodd",
+      "identidad": {
+        "titulo": "Kodd Stream - Watch Live on Kick",
+        "descripcion": "Business inquires: kodgamingtv@hotmail.com"
+      },
+      "tecnologias": {
+        "detected": [
+          {
+            "name": "Angular",
+            "category": "frontend_framework",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "angular template marker"
+            ]
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ],
+        "byCategory": {
+          "frontend_framework": [
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "angular template marker"
+              ]
+            }
+          ],
+          "network_infrastructure": [
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "all": [
+          {
+            "name": "CloudFront",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Nginx",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Apache",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "React",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Angular",
+            "category": "frontend_framework",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "angular template marker"
+            ]
+          },
+          {
+            "name": "Vue",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "WordPress",
+            "category": "cms",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Bootstrap",
+            "category": "ui_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "jQuery",
+            "category": "javascript_library",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Google Tag Manager",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Meta Pixel",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Hotjar",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ]
+      },
+      "metricas": {
+        "tiempoRespuestaMs": 4567,
+        "pesoDocumentoKb": "685.49",
+        "certSslVigente": true,
+        "counts": {
+          "images": 10,
+          "scripts": 217,
+          "sections": 4,
+          "paragraphs": 8,
+          "inputs": 1,
+          "articles": 0,
+          "forms": 1,
+          "links": 18,
+          "headings": 2,
+          "videos": 1,
+          "audios": 0
+        },
+        "topWords": [
+          {
+            "word": "cookies",
+            "count": 3
+          },
+          {
+            "word": "chat",
+            "count": 2
+          },
+          {
+            "word": "com",
+            "count": 2
+          },
+          {
+            "word": "our",
+            "count": 2
+          },
+          {
+            "word": "processor",
+            "count": 2
+          },
+          {
+            "word": "ram",
+            "count": 2
+          },
+          {
+            "word": "system",
+            "count": 2
+          },
+          {
+            "word": "use",
+            "count": 2
+          },
+          {
+            "word": "1000w",
+            "count": 1
+          },
+          {
+            "word": "1080ti",
+            "count": 1
+          }
+        ]
+      },
+      "paneles": {
+        "imageCarousel": {
+          "targetDomain": "kick.com",
+          "activeAssetSrc": "https://kick.com/img/kick-logo.svg",
+          "coreHeadline": "Kodd Stream - Watch Live on Kick",
+          "total": 10,
+          "items": [
+            {
+              "type": "image",
+              "url": "https://kick.com/img/kick-logo.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/user/5027494/profile_image/conversion/97c09db4-ccfa-4677-ae6a-eb4578a67d87-fullsize.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/2902784/image/conversion/b6bfbb02-4197-4d4c-956f-45b8390a5b1e-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/2735751/image/conversion/6f186bbd-84ab-4e61-abef-3c5e2eb14303-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/2523266/image/conversion/2290682e-941c-46c4-a4e0-f42c29a016b3-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/438572/image/conversion/293f805e-49fd-4a1d-bb11-fbc3d3cad0dc-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/438803/image/conversion/7a3426e3-da5a-4169-8ecf-6931b38e61f4-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/1670794/image/conversion/0f676e8e-7c33-4ed9-8658-362407313533-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/1790049/image/conversion/ccec38dd-982c-4e82-9d6e-d3ed25367216-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/1670797/image/conversion/cef7bb90-e5f8-4069-a1c3-a4a7e479790b-image.webp",
+              "selector": "img[src]"
+            }
+          ]
+        },
+        "linkCarousel": {
+          "vectorCount": 14,
+          "items": [
+            "https://kick.com/",
+            "https://kick.com/browse",
+            "https://kick.com/category/meccha-chameleon",
+            "https://instagram.com/ivankodcerro",
+            "https://x.com/ivankodcerro",
+            "https://youtube.com/kodgamingtv",
+            "https://tiktok.com/@ivankodcerro",
+            "https://qzino-partners.com/tp3yslbx5",
+            "https://rustera.co/",
+            "mailto:rustera.co@gmail.com",
+            "https://www.donoclip.com/kodgamingtv",
+            "https://www.instagram.com/ivankodcerro/",
+            "https://www.youtube.com/channel/UCuFWm_s5QxEwoufj3HmPjfQ",
+            "https://botrix.live/k/kodgamingtv/tip"
+          ]
+        },
+        "technologies": {
+          "detected": [
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "angular template marker"
+              ]
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ],
+          "byCategory": {
+            "frontend_framework": [
+              {
+                "name": "Angular",
+                "category": "frontend_framework",
+                "detected": true,
+                "confidence": 0.5,
+                "signals": [
+                  "angular template marker"
+                ]
+              }
+            ],
+            "network_infrastructure": [
+              {
+                "name": "Open Graph Protocol",
+                "category": "network_infrastructure",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "og meta tags"
+                ]
+              }
+            ]
+          },
+          "all": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Nginx",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Apache",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "angular template marker"
+              ]
+            },
+            {
+              "name": "Vue",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "WordPress",
+              "category": "cms",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Bootstrap",
+              "category": "ui_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "jQuery",
+              "category": "javascript_library",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Hotjar",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "stats": {
+          "counts": {
+            "images": 10,
+            "scripts": 217,
+            "sections": 4,
+            "paragraphs": 8,
+            "inputs": 1,
+            "articles": 0,
+            "forms": 1,
+            "links": 18,
+            "headings": 2,
+            "videos": 1,
+            "audios": 0
+          },
+          "topWords": [
+            {
+              "word": "cookies",
+              "count": 3
+            },
+            {
+              "word": "chat",
+              "count": 2
+            },
+            {
+              "word": "com",
+              "count": 2
+            },
+            {
+              "word": "our",
+              "count": 2
+            },
+            {
+              "word": "processor",
+              "count": 2
+            },
+            {
+              "word": "ram",
+              "count": 2
+            },
+            {
+              "word": "system",
+              "count": 2
+            },
+            {
+              "word": "use",
+              "count": 2
+            },
+            {
+              "word": "1000w",
+              "count": 1
+            },
+            {
+              "word": "1080ti",
+              "count": 1
+            }
+          ]
+        }
+      }
+    },
+    "30062026021551": {
+      "estado": "EXITO",
+      "mensaje": "[ENLACE ESTABLECIDO]: Robot operativo y analisis completado.",
+      "objetivo": "https://kick.com/kodd",
+      "identidad": {
+        "titulo": "Kodd Stream - Watch Live on Kick",
+        "descripcion": "Business inquires: kodgamingtv@hotmail.com"
+      },
+      "tecnologias": {
+        "detected": [
+          {
+            "name": "Angular",
+            "category": "frontend_framework",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "angular template marker"
+            ]
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ],
+        "byCategory": {
+          "frontend_framework": [
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "angular template marker"
+              ]
+            }
+          ],
+          "network_infrastructure": [
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "all": [
+          {
+            "name": "CloudFront",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Nginx",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Apache",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "React",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Angular",
+            "category": "frontend_framework",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "angular template marker"
+            ]
+          },
+          {
+            "name": "Vue",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "WordPress",
+            "category": "cms",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Bootstrap",
+            "category": "ui_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "jQuery",
+            "category": "javascript_library",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Google Tag Manager",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Meta Pixel",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Hotjar",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ]
+      },
+      "metricas": {
+        "tiempoRespuestaMs": 6867,
+        "pesoDocumentoKb": "690.83",
+        "certSslVigente": true,
+        "counts": {
+          "images": 13,
+          "scripts": 217,
+          "sections": 4,
+          "paragraphs": 8,
+          "inputs": 1,
+          "articles": 0,
+          "forms": 1,
+          "links": 18,
+          "headings": 2,
+          "videos": 1,
+          "audios": 0
+        },
+        "topWords": [
+          {
+            "word": "cookies",
+            "count": 3
+          },
+          {
+            "word": "com",
+            "count": 2
+          },
+          {
+            "word": "our",
+            "count": 2
+          },
+          {
+            "word": "processor",
+            "count": 2
+          },
+          {
+            "word": "ram",
+            "count": 2
+          },
+          {
+            "word": "system",
+            "count": 2
+          },
+          {
+            "word": "use",
+            "count": 2
+          },
+          {
+            "word": "1000w",
+            "count": 1
+          },
+          {
+            "word": "1080ti",
+            "count": 1
+          },
+          {
+            "word": "240mm",
+            "count": 1
+          }
+        ]
+      },
+      "paneles": {
+        "imageCarousel": {
+          "targetDomain": "kick.com",
+          "activeAssetSrc": "https://kick.com/img/kick-logo.svg",
+          "coreHeadline": "Kodd Stream - Watch Live on Kick",
+          "total": 13,
+          "items": [
+            {
+              "type": "image",
+              "url": "https://kick.com/img/kick-logo.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/user/5027494/profile_image/conversion/97c09db4-ccfa-4677-ae6a-eb4578a67d87-fullsize.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/2902784/image/conversion/b6bfbb02-4197-4d4c-956f-45b8390a5b1e-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/2735751/image/conversion/6f186bbd-84ab-4e61-abef-3c5e2eb14303-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/2523266/image/conversion/2290682e-941c-46c4-a4e0-f42c29a016b3-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/438572/image/conversion/293f805e-49fd-4a1d-bb11-fbc3d3cad0dc-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/438803/image/conversion/7a3426e3-da5a-4169-8ecf-6931b38e61f4-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/1670794/image/conversion/0f676e8e-7c33-4ed9-8658-362407313533-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/1790049/image/conversion/ccec38dd-982c-4e82-9d6e-d3ed25367216-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/images/channel-links/1670797/image/conversion/cef7bb90-e5f8-4069-a1c3-a4a7e479790b-image.webp",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://ext.cdn.kick.com/chat/badges/22_f0dcac43-ed99-482b-a0ff-d9048b25475d.png",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://ext.cdn.kick.com/chat/badges/28_2a14f4f6-7793-431b-8ffc-79f045c425fc.png",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://files.kick.com/channel_subscriber_badges/330041/original",
+              "selector": "img[src]"
+            }
+          ]
+        },
+        "linkCarousel": {
+          "vectorCount": 14,
+          "items": [
+            "https://kick.com/",
+            "https://kick.com/browse",
+            "https://kick.com/category/meccha-chameleon",
+            "https://instagram.com/ivankodcerro",
+            "https://x.com/ivankodcerro",
+            "https://youtube.com/kodgamingtv",
+            "https://tiktok.com/@ivankodcerro",
+            "https://qzino-partners.com/tp3yslbx5",
+            "https://rustera.co/",
+            "mailto:rustera.co@gmail.com",
+            "https://www.donoclip.com/kodgamingtv",
+            "https://www.instagram.com/ivankodcerro/",
+            "https://www.youtube.com/channel/UCuFWm_s5QxEwoufj3HmPjfQ",
+            "https://botrix.live/k/kodgamingtv/tip"
+          ]
+        },
+        "technologies": {
+          "detected": [
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "angular template marker"
+              ]
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ],
+          "byCategory": {
+            "frontend_framework": [
+              {
+                "name": "Angular",
+                "category": "frontend_framework",
+                "detected": true,
+                "confidence": 0.5,
+                "signals": [
+                  "angular template marker"
+                ]
+              }
+            ],
+            "network_infrastructure": [
+              {
+                "name": "Open Graph Protocol",
+                "category": "network_infrastructure",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "og meta tags"
+                ]
+              }
+            ]
+          },
+          "all": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Nginx",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Apache",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "angular template marker"
+              ]
+            },
+            {
+              "name": "Vue",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "WordPress",
+              "category": "cms",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Bootstrap",
+              "category": "ui_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "jQuery",
+              "category": "javascript_library",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Hotjar",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "stats": {
+          "counts": {
+            "images": 13,
+            "scripts": 217,
+            "sections": 4,
+            "paragraphs": 8,
+            "inputs": 1,
+            "articles": 0,
+            "forms": 1,
+            "links": 18,
+            "headings": 2,
+            "videos": 1,
+            "audios": 0
+          },
+          "topWords": [
+            {
+              "word": "cookies",
+              "count": 3
+            },
+            {
+              "word": "com",
+              "count": 2
+            },
+            {
+              "word": "our",
+              "count": 2
+            },
+            {
+              "word": "processor",
+              "count": 2
+            },
+            {
+              "word": "ram",
+              "count": 2
+            },
+            {
+              "word": "system",
+              "count": 2
+            },
+            {
+              "word": "use",
+              "count": 2
+            },
+            {
+              "word": "1000w",
+              "count": 1
+            },
+            {
+              "word": "1080ti",
+              "count": 1
+            },
+            {
+              "word": "240mm",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "www.infobae.com": {
+    "30062026021649": {
+      "estado": "EXITO",
+      "mensaje": "[ENLACE ESTABLECIDO]: Robot operativo y analisis completado.",
+      "objetivo": "https://www.infobae.com/",
+      "identidad": {
+        "titulo": "Hacemos periodismo - Infobae",
+        "descripcion": "El sitio de noticias en español más leído en el mundo. Con redacciones en Ciudad de México, Madrid, Bogotá, Lima y Buenos Aires; y corresponsales en las principales ciudades del mundo."
+      },
+      "tecnologias": {
+        "detected": [
+          {
+            "name": "CloudFront",
+            "category": "core_server_node",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "cdn url includes cloudfront"
+            ]
+          },
+          {
+            "name": "React",
+            "category": "frontend_framework",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "script source includes react"
+            ]
+          },
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtag script",
+              "analytics usage"
+            ]
+          },
+          {
+            "name": "Google Tag Manager",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtm script",
+              "gtm noscript"
+            ]
+          },
+          {
+            "name": "Meta Pixel",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "facebook pixel script",
+              "fbq call"
+            ]
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ],
+        "byCategory": {
+          "core_server_node": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "cdn url includes cloudfront"
+              ]
+            }
+          ],
+          "frontend_framework": [
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "script source includes react"
+              ]
+            }
+          ],
+          "data_surveillance_trackers": [
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtm script",
+                "gtm noscript"
+              ]
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "facebook pixel script",
+                "fbq call"
+              ]
+            }
+          ],
+          "network_infrastructure": [
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "all": [
+          {
+            "name": "CloudFront",
+            "category": "core_server_node",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "cdn url includes cloudfront"
+            ]
+          },
+          {
+            "name": "Nginx",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Apache",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "React",
+            "category": "frontend_framework",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "script source includes react"
+            ]
+          },
+          {
+            "name": "Angular",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Vue",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "WordPress",
+            "category": "cms",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Bootstrap",
+            "category": "ui_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "jQuery",
+            "category": "javascript_library",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtag script",
+              "analytics usage"
+            ]
+          },
+          {
+            "name": "Google Tag Manager",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtm script",
+              "gtm noscript"
+            ]
+          },
+          {
+            "name": "Meta Pixel",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "facebook pixel script",
+              "fbq call"
+            ]
+          },
+          {
+            "name": "Hotjar",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ]
+      },
+      "metricas": {
+        "tiempoRespuestaMs": 5971,
+        "pesoDocumentoKb": "1359.13",
+        "certSslVigente": true,
+        "counts": {
+          "images": 442,
+          "scripts": 71,
+          "sections": 0,
+          "paragraphs": 620,
+          "inputs": 1,
+          "articles": 0,
+          "forms": 1,
+          "links": 342,
+          "headings": 240,
+          "videos": 1,
+          "audios": 0
+        },
+        "topWords": [
+          {
+            "word": "mundial",
+            "count": 25
+          },
+          {
+            "word": "más",
+            "count": 22
+          },
+          {
+            "word": "tras",
+            "count": 21
+          },
+          {
+            "word": "paraguay",
+            "count": 18
+          },
+          {
+            "word": "ante",
+            "count": 14
+          },
+          {
+            "word": "alemania",
+            "count": 13
+          },
+          {
+            "word": "qué",
+            "count": 11
+          },
+          {
+            "word": "argentina",
+            "count": 10
+          },
+          {
+            "word": "rápida",
+            "count": 10
+          },
+          {
+            "word": "triunfo",
+            "count": 10
+          }
+        ]
+      },
+      "paneles": {
+        "imageCarousel": {
+          "targetDomain": "www.infobae.com",
+          "activeAssetSrc": "https://www.infobae.com/assets/images/logos/logo_infobae_naranja.svg",
+          "coreHeadline": "Hacemos periodismo - Infobae",
+          "total": 287,
+          "items": [
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/logos/logo_infobae_naranja.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/logo-FM%2Bplayer.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/logos/aspen-logo.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/logo-FM-naranja.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/icon-reproductor-naranja.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/ondas-reproductor-naranja.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/icon-reproductor-gris.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/ondas-reproductor-gris.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/infobaeFM971LogoSVG.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/Ray.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/sports/eventos-deportivos/soccer/logos/leagues/copa-del-mundo-70e.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/resizer/v2/54OLJDHQY5ED7BZGWJFC7YKZRQ.png?auth=8b551ba25614731eb3f9a17d6d87a7296e9f89362c740c22008c39fb14eea8c4",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://infobae-static.infobae.com/assets/images/sports/soccer/icons/top-performers-ball-black.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://storage.googleapis.com/infobae-static/assets/images/sports/soccer/contestant/version-2/39d8zamp9tvg3wc51jxc2a1c0.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://storage.googleapis.com/infobae-static/assets/images/sports/soccer/contestant/version-2/e1vf7kzswllumuykwezkrbo70.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://storage.googleapis.com/infobae-static/assets/images/sports/soccer/contestant/version-2/4pz87gsel7183b7kcadw1dwzv.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://storage.googleapis.com/infobae-static/assets/images/sports/soccer/contestant/version-2/4w1ktgu1nbbgqfe3ssbb4fg5v.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://storage.googleapis.com/infobae-static/assets/images/sports/soccer/contestant/version-2/4vofb84dzb5fyc81n2ssws6ah.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://storage.googleapis.com/infobae-static/assets/images/sports/soccer/contestant/version-2/2j2402oabiovxw24cnjk9m369.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/resizer/v2/772EJQXWT5GKJL4RADT33HOCRE.jpg?auth=41ab6c9761205e3fa396ffa9f621c5a18f9df71aa8523239de35bfa9b86fb163&smart=true&width=350&height=197&quality=85",
+              "selector": "img[src]"
+            }
+          ]
+        },
+        "linkCarousel": {
+          "vectorCount": 295,
+          "items": [
+            "https://www.infobae.com/",
+            "https://www.infobae.com/?noredirect",
+            "https://www.infobae.com/estados-unidos/",
+            "https://www.infobae.com/colombia/",
+            "https://www.infobae.com/espana/",
+            "https://www.infobae.com/mexico/",
+            "https://www.infobae.com/peru/",
+            "https://www.infobae.com/centroamerica/",
+            "https://www.infobae.com/america/",
+            "https://www.infobae.com/ultimas-noticias/",
+            "https://www.infobae.com/deportes/",
+            "https://www.infobae.com/politica/",
+            "https://www.infobae.com/economia/",
+            "https://www.infobae.com/radio-fm-97-1/",
+            "https://www.infobae.com/aspen/",
+            "https://www.infobae.com/venezuela/",
+            "https://www.infobae.com/entretenimiento/",
+            "https://www.infobae.com/economist/",
+            "https://www.infobae.com/wapo/",
+            "https://www.infobae.com/america/realeza/",
+            "https://www.infobae.com/america/opinion/",
+            "https://www.infobae.com/tenis-argentino/",
+            "https://www.infobae.com/leyes/",
+            "https://www.infobae.com/teleshow/",
+            "https://www.infobae.com/sociedad/",
+            "https://www.infobae.com/sociedad/policiales/",
+            "https://www.infobae.com/perros-y-gatos/",
+            "https://www.infobae.com/revista-chacra/",
+            "https://www.infobae.com/movant/",
+            "https://www.infobae.com/turismo/",
+            "https://www.infobae.com/tendencias/",
+            "https://www.infobae.com/tendencias/estar-mejor/",
+            "https://www.infobae.com/que-puedo-ver/",
+            "https://www.infobae.com/educacion/",
+            "https://www.infobae.com/podcasts/",
+            "https://www.infobae.com/video/",
+            "https://www.infobae.com/cultura/",
+            "https://www.infobae.com/malditos-nerds/",
+            "https://www.infobae.com/tecno/",
+            "https://www.infobae.com/virales/",
+            "https://www.infobae.com/judiciales/",
+            "https://www.infobae.com/salud/",
+            "https://www.infobae.com/autos/",
+            "https://www.infobae.com/mundial-2026/",
+            "https://www.infobae.com/tag/infobae-en-vivo/",
+            "https://www.infobae.com/mundial-2026/simulador/",
+            "https://www.infobae.com/tag/manuel-adorni/",
+            "https://www.infobae.com/edictos/",
+            "https://www.infobae.com/mundial-2026/grupos/",
+            "https://www.infobae.com/deportes/2026/06/29/alemania-paraguay-en-vivo-por-los-16avos-del-mundial-2026-hora-tv-formaciones-y-todo-lo-que-hay-que-saber/"
+          ]
+        },
+        "technologies": {
+          "detected": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "cdn url includes cloudfront"
+              ]
+            },
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "script source includes react"
+              ]
+            },
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtm script",
+                "gtm noscript"
+              ]
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "facebook pixel script",
+                "fbq call"
+              ]
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ],
+          "byCategory": {
+            "core_server_node": [
+              {
+                "name": "CloudFront",
+                "category": "core_server_node",
+                "detected": true,
+                "confidence": 0.5,
+                "signals": [
+                  "cdn url includes cloudfront"
+                ]
+              }
+            ],
+            "frontend_framework": [
+              {
+                "name": "React",
+                "category": "frontend_framework",
+                "detected": true,
+                "confidence": 0.5,
+                "signals": [
+                  "script source includes react"
+                ]
+              }
+            ],
+            "data_surveillance_trackers": [
+              {
+                "name": "Google Analytics",
+                "category": "data_surveillance_trackers",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "gtag script",
+                  "analytics usage"
+                ]
+              },
+              {
+                "name": "Google Tag Manager",
+                "category": "data_surveillance_trackers",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "gtm script",
+                  "gtm noscript"
+                ]
+              },
+              {
+                "name": "Meta Pixel",
+                "category": "data_surveillance_trackers",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "facebook pixel script",
+                  "fbq call"
+                ]
+              }
+            ],
+            "network_infrastructure": [
+              {
+                "name": "Open Graph Protocol",
+                "category": "network_infrastructure",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "og meta tags"
+                ]
+              }
+            ]
+          },
+          "all": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "cdn url includes cloudfront"
+              ]
+            },
+            {
+              "name": "Nginx",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Apache",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "script source includes react"
+              ]
+            },
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Vue",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "WordPress",
+              "category": "cms",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Bootstrap",
+              "category": "ui_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "jQuery",
+              "category": "javascript_library",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtm script",
+                "gtm noscript"
+              ]
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "facebook pixel script",
+                "fbq call"
+              ]
+            },
+            {
+              "name": "Hotjar",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "stats": {
+          "counts": {
+            "images": 442,
+            "scripts": 71,
+            "sections": 0,
+            "paragraphs": 620,
+            "inputs": 1,
+            "articles": 0,
+            "forms": 1,
+            "links": 342,
+            "headings": 240,
+            "videos": 1,
+            "audios": 0
+          },
+          "topWords": [
+            {
+              "word": "mundial",
+              "count": 25
+            },
+            {
+              "word": "más",
+              "count": 22
+            },
+            {
+              "word": "tras",
+              "count": 21
+            },
+            {
+              "word": "paraguay",
+              "count": 18
+            },
+            {
+              "word": "ante",
+              "count": 14
+            },
+            {
+              "word": "alemania",
+              "count": 13
+            },
+            {
+              "word": "qué",
+              "count": 11
+            },
+            {
+              "word": "argentina",
+              "count": 10
+            },
+            {
+              "word": "rápida",
+              "count": 10
+            },
+            {
+              "word": "triunfo",
+              "count": 10
+            }
+          ]
+        }
+      }
+    },
+    "30062026022244": {
+      "estado": "EXITO",
+      "mensaje": "[ENLACE ESTABLECIDO]: Robot operativo y analisis completado.",
+      "objetivo": "https://www.infobae.com/",
+      "identidad": {
+        "titulo": "Hacemos periodismo - Infobae",
+        "descripcion": "El sitio de noticias en español más leído en el mundo. Con redacciones en Ciudad de México, Madrid, Bogotá, Lima y Buenos Aires; y corresponsales en las principales ciudades del mundo."
+      },
+      "tecnologias": {
+        "detected": [
+          {
+            "name": "CloudFront",
+            "category": "core_server_node",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "cdn url includes cloudfront"
+            ]
+          },
+          {
+            "name": "React",
+            "category": "frontend_framework",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "script source includes react"
+            ]
+          },
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtag script",
+              "analytics usage"
+            ]
+          },
+          {
+            "name": "Google Tag Manager",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtm script",
+              "gtm noscript"
+            ]
+          },
+          {
+            "name": "Meta Pixel",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "facebook pixel script",
+              "fbq call"
+            ]
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ],
+        "byCategory": {
+          "core_server_node": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "cdn url includes cloudfront"
+              ]
+            }
+          ],
+          "frontend_framework": [
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "script source includes react"
+              ]
+            }
+          ],
+          "data_surveillance_trackers": [
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtm script",
+                "gtm noscript"
+              ]
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "facebook pixel script",
+                "fbq call"
+              ]
+            }
+          ],
+          "network_infrastructure": [
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "all": [
+          {
+            "name": "CloudFront",
+            "category": "core_server_node",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "cdn url includes cloudfront"
+            ]
+          },
+          {
+            "name": "Nginx",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Apache",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "React",
+            "category": "frontend_framework",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "script source includes react"
+            ]
+          },
+          {
+            "name": "Angular",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Vue",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "WordPress",
+            "category": "cms",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Bootstrap",
+            "category": "ui_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "jQuery",
+            "category": "javascript_library",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtag script",
+              "analytics usage"
+            ]
+          },
+          {
+            "name": "Google Tag Manager",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtm script",
+              "gtm noscript"
+            ]
+          },
+          {
+            "name": "Meta Pixel",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "facebook pixel script",
+              "fbq call"
+            ]
+          },
+          {
+            "name": "Hotjar",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ]
+      },
+      "metricas": {
+        "tiempoRespuestaMs": 5260,
+        "pesoDocumentoKb": "1384.38",
+        "certSslVigente": true,
+        "counts": {
+          "images": 442,
+          "scripts": 99,
+          "sections": 0,
+          "paragraphs": 620,
+          "inputs": 1,
+          "articles": 0,
+          "forms": 1,
+          "links": 342,
+          "headings": 240,
+          "videos": 1,
+          "audios": 0
+        },
+        "topWords": [
+          {
+            "word": "mundial",
+            "count": 25
+          },
+          {
+            "word": "más",
+            "count": 22
+          },
+          {
+            "word": "tras",
+            "count": 21
+          },
+          {
+            "word": "paraguay",
+            "count": 18
+          },
+          {
+            "word": "ante",
+            "count": 14
+          },
+          {
+            "word": "alemania",
+            "count": 13
+          },
+          {
+            "word": "qué",
+            "count": 11
+          },
+          {
+            "word": "argentina",
+            "count": 10
+          },
+          {
+            "word": "rápida",
+            "count": 10
+          },
+          {
+            "word": "triunfo",
+            "count": 10
+          }
+        ]
+      },
+      "paneles": {
+        "imageCarousel": {
+          "targetDomain": "www.infobae.com",
+          "activeAssetSrc": "https://www.infobae.com/assets/images/logos/logo_infobae_naranja.svg",
+          "coreHeadline": "Hacemos periodismo - Infobae",
+          "total": 287,
+          "items": [
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/logos/logo_infobae_naranja.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/logo-FM%2Bplayer.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/logos/aspen-logo.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/logo-FM-naranja.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/icon-reproductor-naranja.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/ondas-reproductor-naranja.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/icon-reproductor-gris.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/ondas-reproductor-gris.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/infobaeFM971LogoSVG.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/Ray.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/sports/eventos-deportivos/soccer/logos/leagues/copa-del-mundo-70e.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/resizer/v2/54OLJDHQY5ED7BZGWJFC7YKZRQ.png?auth=8b551ba25614731eb3f9a17d6d87a7296e9f89362c740c22008c39fb14eea8c4",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://infobae-static.infobae.com/assets/images/sports/soccer/icons/top-performers-ball-black.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://storage.googleapis.com/infobae-static/assets/images/sports/soccer/contestant/version-2/39d8zamp9tvg3wc51jxc2a1c0.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://storage.googleapis.com/infobae-static/assets/images/sports/soccer/contestant/version-2/e1vf7kzswllumuykwezkrbo70.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://storage.googleapis.com/infobae-static/assets/images/sports/soccer/contestant/version-2/4pz87gsel7183b7kcadw1dwzv.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://storage.googleapis.com/infobae-static/assets/images/sports/soccer/contestant/version-2/4w1ktgu1nbbgqfe3ssbb4fg5v.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://storage.googleapis.com/infobae-static/assets/images/sports/soccer/contestant/version-2/4vofb84dzb5fyc81n2ssws6ah.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://storage.googleapis.com/infobae-static/assets/images/sports/soccer/contestant/version-2/2j2402oabiovxw24cnjk9m369.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/resizer/v2/772EJQXWT5GKJL4RADT33HOCRE.jpg?auth=41ab6c9761205e3fa396ffa9f621c5a18f9df71aa8523239de35bfa9b86fb163&smart=true&width=350&height=197&quality=85",
+              "selector": "img[src]"
+            }
+          ]
+        },
+        "linkCarousel": {
+          "vectorCount": 294,
+          "items": [
+            "https://www.infobae.com/",
+            "https://www.infobae.com/?noredirect",
+            "https://www.infobae.com/estados-unidos/",
+            "https://www.infobae.com/colombia/",
+            "https://www.infobae.com/espana/",
+            "https://www.infobae.com/mexico/",
+            "https://www.infobae.com/peru/",
+            "https://www.infobae.com/centroamerica/",
+            "https://www.infobae.com/america/",
+            "https://www.infobae.com/ultimas-noticias/",
+            "https://www.infobae.com/deportes/",
+            "https://www.infobae.com/politica/",
+            "https://www.infobae.com/economia/",
+            "https://www.infobae.com/radio-fm-97-1/",
+            "https://www.infobae.com/aspen/",
+            "https://www.infobae.com/venezuela/",
+            "https://www.infobae.com/entretenimiento/",
+            "https://www.infobae.com/economist/",
+            "https://www.infobae.com/wapo/",
+            "https://www.infobae.com/america/realeza/",
+            "https://www.infobae.com/america/opinion/",
+            "https://www.infobae.com/tenis-argentino/",
+            "https://www.infobae.com/leyes/",
+            "https://www.infobae.com/teleshow/",
+            "https://www.infobae.com/sociedad/",
+            "https://www.infobae.com/sociedad/policiales/",
+            "https://www.infobae.com/perros-y-gatos/",
+            "https://www.infobae.com/revista-chacra/",
+            "https://www.infobae.com/movant/",
+            "https://www.infobae.com/turismo/",
+            "https://www.infobae.com/tendencias/",
+            "https://www.infobae.com/tendencias/estar-mejor/",
+            "https://www.infobae.com/que-puedo-ver/",
+            "https://www.infobae.com/educacion/",
+            "https://www.infobae.com/podcasts/",
+            "https://www.infobae.com/video/",
+            "https://www.infobae.com/cultura/",
+            "https://www.infobae.com/malditos-nerds/",
+            "https://www.infobae.com/tecno/",
+            "https://www.infobae.com/virales/",
+            "https://www.infobae.com/judiciales/",
+            "https://www.infobae.com/salud/",
+            "https://www.infobae.com/autos/",
+            "https://www.infobae.com/mundial-2026/",
+            "https://www.infobae.com/tag/infobae-en-vivo/",
+            "https://www.infobae.com/mundial-2026/simulador/",
+            "https://www.infobae.com/tag/manuel-adorni/",
+            "https://www.infobae.com/edictos/",
+            "https://www.infobae.com/mundial-2026/grupos/",
+            "https://www.infobae.com/deportes/2026/06/29/alemania-paraguay-en-vivo-por-los-16avos-del-mundial-2026-hora-tv-formaciones-y-todo-lo-que-hay-que-saber/"
+          ]
+        },
+        "technologies": {
+          "detected": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "cdn url includes cloudfront"
+              ]
+            },
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "script source includes react"
+              ]
+            },
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtm script",
+                "gtm noscript"
+              ]
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "facebook pixel script",
+                "fbq call"
+              ]
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ],
+          "byCategory": {
+            "core_server_node": [
+              {
+                "name": "CloudFront",
+                "category": "core_server_node",
+                "detected": true,
+                "confidence": 0.5,
+                "signals": [
+                  "cdn url includes cloudfront"
+                ]
+              }
+            ],
+            "frontend_framework": [
+              {
+                "name": "React",
+                "category": "frontend_framework",
+                "detected": true,
+                "confidence": 0.5,
+                "signals": [
+                  "script source includes react"
+                ]
+              }
+            ],
+            "data_surveillance_trackers": [
+              {
+                "name": "Google Analytics",
+                "category": "data_surveillance_trackers",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "gtag script",
+                  "analytics usage"
+                ]
+              },
+              {
+                "name": "Google Tag Manager",
+                "category": "data_surveillance_trackers",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "gtm script",
+                  "gtm noscript"
+                ]
+              },
+              {
+                "name": "Meta Pixel",
+                "category": "data_surveillance_trackers",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "facebook pixel script",
+                  "fbq call"
+                ]
+              }
+            ],
+            "network_infrastructure": [
+              {
+                "name": "Open Graph Protocol",
+                "category": "network_infrastructure",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "og meta tags"
+                ]
+              }
+            ]
+          },
+          "all": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "cdn url includes cloudfront"
+              ]
+            },
+            {
+              "name": "Nginx",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Apache",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "script source includes react"
+              ]
+            },
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Vue",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "WordPress",
+              "category": "cms",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Bootstrap",
+              "category": "ui_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "jQuery",
+              "category": "javascript_library",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtm script",
+                "gtm noscript"
+              ]
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "facebook pixel script",
+                "fbq call"
+              ]
+            },
+            {
+              "name": "Hotjar",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "stats": {
+          "counts": {
+            "images": 442,
+            "scripts": 99,
+            "sections": 0,
+            "paragraphs": 620,
+            "inputs": 1,
+            "articles": 0,
+            "forms": 1,
+            "links": 342,
+            "headings": 240,
+            "videos": 1,
+            "audios": 0
+          },
+          "topWords": [
+            {
+              "word": "mundial",
+              "count": 25
+            },
+            {
+              "word": "más",
+              "count": 22
+            },
+            {
+              "word": "tras",
+              "count": 21
+            },
+            {
+              "word": "paraguay",
+              "count": 18
+            },
+            {
+              "word": "ante",
+              "count": 14
+            },
+            {
+              "word": "alemania",
+              "count": 13
+            },
+            {
+              "word": "qué",
+              "count": 11
+            },
+            {
+              "word": "argentina",
+              "count": 10
+            },
+            {
+              "word": "rápida",
+              "count": 10
+            },
+            {
+              "word": "triunfo",
+              "count": 10
+            }
+          ]
+        }
+      }
+    },
+    "30062026022453": {
+      "estado": "EXITO",
+      "mensaje": "[ENLACE ESTABLECIDO]: Robot operativo y analisis completado.",
+      "objetivo": "https://www.infobae.com/",
+      "identidad": {
+        "titulo": "Hacemos periodismo - Infobae",
+        "descripcion": "El sitio de noticias en español más leído en el mundo. Con redacciones en Ciudad de México, Madrid, Bogotá, Lima y Buenos Aires; y corresponsales en las principales ciudades del mundo."
+      },
+      "tecnologias": {
+        "detected": [
+          {
+            "name": "CloudFront",
+            "category": "core_server_node",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "cdn url includes cloudfront"
+            ]
+          },
+          {
+            "name": "React",
+            "category": "frontend_framework",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "script source includes react"
+            ]
+          },
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtag script",
+              "analytics usage"
+            ]
+          },
+          {
+            "name": "Google Tag Manager",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtm script",
+              "gtm noscript"
+            ]
+          },
+          {
+            "name": "Meta Pixel",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "facebook pixel script",
+              "fbq call"
+            ]
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ],
+        "byCategory": {
+          "core_server_node": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "cdn url includes cloudfront"
+              ]
+            }
+          ],
+          "frontend_framework": [
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "script source includes react"
+              ]
+            }
+          ],
+          "data_surveillance_trackers": [
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtm script",
+                "gtm noscript"
+              ]
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "facebook pixel script",
+                "fbq call"
+              ]
+            }
+          ],
+          "network_infrastructure": [
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "all": [
+          {
+            "name": "CloudFront",
+            "category": "core_server_node",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "cdn url includes cloudfront"
+            ]
+          },
+          {
+            "name": "Nginx",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Apache",
+            "category": "core_server_node",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "React",
+            "category": "frontend_framework",
+            "detected": true,
+            "confidence": 0.5,
+            "signals": [
+              "script source includes react"
+            ]
+          },
+          {
+            "name": "Angular",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Vue",
+            "category": "frontend_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "WordPress",
+            "category": "cms",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Bootstrap",
+            "category": "ui_framework",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "jQuery",
+            "category": "javascript_library",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Google Analytics",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtag script",
+              "analytics usage"
+            ]
+          },
+          {
+            "name": "Google Tag Manager",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "gtm script",
+              "gtm noscript"
+            ]
+          },
+          {
+            "name": "Meta Pixel",
+            "category": "data_surveillance_trackers",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "facebook pixel script",
+              "fbq call"
+            ]
+          },
+          {
+            "name": "Hotjar",
+            "category": "data_surveillance_trackers",
+            "detected": false,
+            "confidence": 0,
+            "signals": []
+          },
+          {
+            "name": "Open Graph Protocol",
+            "category": "network_infrastructure",
+            "detected": true,
+            "confidence": 1,
+            "signals": [
+              "og meta tags"
+            ]
+          }
+        ]
+      },
+      "metricas": {
+        "tiempoRespuestaMs": 5130,
+        "pesoDocumentoKb": "1486.62",
+        "certSslVigente": true,
+        "counts": {
+          "images": 436,
+          "scripts": 98,
+          "sections": 0,
+          "paragraphs": 617,
+          "inputs": 1,
+          "articles": 0,
+          "forms": 1,
+          "links": 342,
+          "headings": 237,
+          "videos": 1,
+          "audios": 0
+        },
+        "topWords": [
+          {
+            "word": "mundial",
+            "count": 25
+          },
+          {
+            "word": "más",
+            "count": 22
+          },
+          {
+            "word": "tras",
+            "count": 21
+          },
+          {
+            "word": "paraguay",
+            "count": 18
+          },
+          {
+            "word": "ante",
+            "count": 14
+          },
+          {
+            "word": "alemania",
+            "count": 13
+          },
+          {
+            "word": "qué",
+            "count": 11
+          },
+          {
+            "word": "argentina",
+            "count": 10
+          },
+          {
+            "word": "rápida",
+            "count": 10
+          },
+          {
+            "word": "triunfo",
+            "count": 10
+          }
+        ]
+      },
+      "paneles": {
+        "imageCarousel": {
+          "targetDomain": "www.infobae.com",
+          "activeAssetSrc": "https://www.infobae.com/assets/images/logos/logo_infobae_naranja.svg",
+          "coreHeadline": "Hacemos periodismo - Infobae",
+          "total": 287,
+          "items": [
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/logos/logo_infobae_naranja.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/logo-FM%2Bplayer.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/logos/aspen-logo.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/logo-FM-naranja.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/icon-reproductor-naranja.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/ondas-reproductor-naranja.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/icon-reproductor-gris.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/ondas-reproductor-gris.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/infobaeFM971LogoSVG.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/Ray.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/sports/eventos-deportivos/soccer/logos/leagues/copa-del-mundo-70e.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/resizer/v2/54OLJDHQY5ED7BZGWJFC7YKZRQ.png?auth=8b551ba25614731eb3f9a17d6d87a7296e9f89362c740c22008c39fb14eea8c4",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://infobae-static.infobae.com/assets/images/sports/soccer/icons/top-performers-ball-black.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/resizer/v2/772EJQXWT5GKJL4RADT33HOCRE.jpg?auth=41ab6c9761205e3fa396ffa9f621c5a18f9df71aa8523239de35bfa9b86fb163&smart=true&width=350&height=197&quality=85",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/resizer/v2/72BMVHVYZBA2VF4YH7S7GPMVPM.JPG?auth=6dde801c4f1ff4d3db1d01c845aab35a6e61c9488bc19c1ee27a0a6d6abef21a&smart=true&width=350&height=197&quality=85",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/resizer/v2/C4MW4ZNIHZENTJ7AG6Q3U3FP2U.JPG?auth=0fca26884ba0571ddc001ec2c37edb865f1467beb538441a93afd7279ecdd30a&smart=true&width=350&height=197&quality=85",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/resizer/v2/2A4GKSAL35FNNP5IHUPHDI3SKI.jpeg?auth=89323da3a63a4c2af4e7be8930ac84af35bae875946fb1570697ac77a717f04f&smart=true&width=350&height=197&quality=85",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/assets/images/icons/StoryVideoIcon.svg",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/resizer/v2/DZRNWHISSNGCRHIRC2SNXBYLAY.JPG?auth=a124a2f36d54784289bf6123666fd7b7fb84b9b9ff17fd56f48a37ab42f1622f&smart=true&width=350&height=197&quality=85",
+              "selector": "img[src]"
+            },
+            {
+              "type": "image",
+              "url": "https://www.infobae.com/resizer/v2/R3CJQTR6LJDYFBWDDS43JTSBJE.JPG?auth=7f76ac98cb221ccf3dae3c3231ba4de87c86a911d0a5273826a2dc7a3607b68b&smart=true&width=350&height=197&quality=85",
+              "selector": "img[src]"
+            }
+          ]
+        },
+        "linkCarousel": {
+          "vectorCount": 294,
+          "items": [
+            "https://www.infobae.com/",
+            "https://www.infobae.com/?noredirect",
+            "https://www.infobae.com/estados-unidos/",
+            "https://www.infobae.com/colombia/",
+            "https://www.infobae.com/espana/",
+            "https://www.infobae.com/mexico/",
+            "https://www.infobae.com/peru/",
+            "https://www.infobae.com/centroamerica/",
+            "https://www.infobae.com/america/",
+            "https://www.infobae.com/ultimas-noticias/",
+            "https://www.infobae.com/deportes/",
+            "https://www.infobae.com/politica/",
+            "https://www.infobae.com/economia/",
+            "https://www.infobae.com/radio-fm-97-1/",
+            "https://www.infobae.com/aspen/",
+            "https://www.infobae.com/venezuela/",
+            "https://www.infobae.com/entretenimiento/",
+            "https://www.infobae.com/economist/",
+            "https://www.infobae.com/wapo/",
+            "https://www.infobae.com/america/realeza/",
+            "https://www.infobae.com/america/opinion/",
+            "https://www.infobae.com/tenis-argentino/",
+            "https://www.infobae.com/leyes/",
+            "https://www.infobae.com/teleshow/",
+            "https://www.infobae.com/sociedad/",
+            "https://www.infobae.com/sociedad/policiales/",
+            "https://www.infobae.com/perros-y-gatos/",
+            "https://www.infobae.com/revista-chacra/",
+            "https://www.infobae.com/movant/",
+            "https://www.infobae.com/turismo/",
+            "https://www.infobae.com/tendencias/",
+            "https://www.infobae.com/tendencias/estar-mejor/",
+            "https://www.infobae.com/que-puedo-ver/",
+            "https://www.infobae.com/educacion/",
+            "https://www.infobae.com/podcasts/",
+            "https://www.infobae.com/video/",
+            "https://www.infobae.com/cultura/",
+            "https://www.infobae.com/malditos-nerds/",
+            "https://www.infobae.com/tecno/",
+            "https://www.infobae.com/virales/",
+            "https://www.infobae.com/judiciales/",
+            "https://www.infobae.com/salud/",
+            "https://www.infobae.com/autos/",
+            "https://www.infobae.com/mundial-2026/",
+            "https://www.infobae.com/tag/infobae-en-vivo/",
+            "https://www.infobae.com/mundial-2026/simulador/",
+            "https://www.infobae.com/tag/manuel-adorni/",
+            "https://www.infobae.com/edictos/",
+            "https://www.infobae.com/mundial-2026/grupos/",
+            "https://www.infobae.com/deportes/2026/06/29/alemania-paraguay-en-vivo-por-los-16avos-del-mundial-2026-hora-tv-formaciones-y-todo-lo-que-hay-que-saber/"
+          ]
+        },
+        "technologies": {
+          "detected": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "cdn url includes cloudfront"
+              ]
+            },
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "script source includes react"
+              ]
+            },
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtm script",
+                "gtm noscript"
+              ]
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "facebook pixel script",
+                "fbq call"
+              ]
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ],
+          "byCategory": {
+            "core_server_node": [
+              {
+                "name": "CloudFront",
+                "category": "core_server_node",
+                "detected": true,
+                "confidence": 0.5,
+                "signals": [
+                  "cdn url includes cloudfront"
+                ]
+              }
+            ],
+            "frontend_framework": [
+              {
+                "name": "React",
+                "category": "frontend_framework",
+                "detected": true,
+                "confidence": 0.5,
+                "signals": [
+                  "script source includes react"
+                ]
+              }
+            ],
+            "data_surveillance_trackers": [
+              {
+                "name": "Google Analytics",
+                "category": "data_surveillance_trackers",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "gtag script",
+                  "analytics usage"
+                ]
+              },
+              {
+                "name": "Google Tag Manager",
+                "category": "data_surveillance_trackers",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "gtm script",
+                  "gtm noscript"
+                ]
+              },
+              {
+                "name": "Meta Pixel",
+                "category": "data_surveillance_trackers",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "facebook pixel script",
+                  "fbq call"
+                ]
+              }
+            ],
+            "network_infrastructure": [
+              {
+                "name": "Open Graph Protocol",
+                "category": "network_infrastructure",
+                "detected": true,
+                "confidence": 1,
+                "signals": [
+                  "og meta tags"
+                ]
+              }
+            ]
+          },
+          "all": [
+            {
+              "name": "CloudFront",
+              "category": "core_server_node",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "cdn url includes cloudfront"
+              ]
+            },
+            {
+              "name": "Nginx",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Apache",
+              "category": "core_server_node",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "React",
+              "category": "frontend_framework",
+              "detected": true,
+              "confidence": 0.5,
+              "signals": [
+                "script source includes react"
+              ]
+            },
+            {
+              "name": "Angular",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Vue",
+              "category": "frontend_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "WordPress",
+              "category": "cms",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Bootstrap",
+              "category": "ui_framework",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "jQuery",
+              "category": "javascript_library",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Google Analytics",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtag script",
+                "analytics usage"
+              ]
+            },
+            {
+              "name": "Google Tag Manager",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "gtm script",
+                "gtm noscript"
+              ]
+            },
+            {
+              "name": "Meta Pixel",
+              "category": "data_surveillance_trackers",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "facebook pixel script",
+                "fbq call"
+              ]
+            },
+            {
+              "name": "Hotjar",
+              "category": "data_surveillance_trackers",
+              "detected": false,
+              "confidence": 0,
+              "signals": []
+            },
+            {
+              "name": "Open Graph Protocol",
+              "category": "network_infrastructure",
+              "detected": true,
+              "confidence": 1,
+              "signals": [
+                "og meta tags"
+              ]
+            }
+          ]
+        },
+        "stats": {
+          "counts": {
+            "images": 436,
+            "scripts": 98,
+            "sections": 0,
+            "paragraphs": 617,
+            "inputs": 1,
+            "articles": 0,
+            "forms": 1,
+            "links": 342,
+            "headings": 237,
+            "videos": 1,
+            "audios": 0
+          },
+          "topWords": [
+            {
+              "word": "mundial",
+              "count": 25
+            },
+            {
+              "word": "más",
+              "count": 22
+            },
+            {
+              "word": "tras",
+              "count": 21
+            },
+            {
+              "word": "paraguay",
+              "count": 18
+            },
+            {
+              "word": "ante",
+              "count": 14
+            },
+            {
+              "word": "alemania",
+              "count": 13
+            },
+            {
+              "word": "qué",
+              "count": 11
+            },
+            {
+              "word": "argentina",
+              "count": 10
+            },
+            {
+              "word": "rápida",
+              "count": 10
+            },
+            {
+              "word": "triunfo",
+              "count": 10
+            }
+          ]
+        }
+      }
+    }
+  }
+}
